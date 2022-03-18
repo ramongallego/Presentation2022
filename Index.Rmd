@@ -21,6 +21,8 @@ class: nord-dark, center
 
 background-image: linear-gradient(150deg,rgba(46, 52, 64, 10%),rgba(46, 52, 64, 90%),rgba(46, 52, 64, 50%),rgba(46, 52, 64, 10%)), url(images/eDNA_concept.png)
 
+background-size: cover
+
 
 # .huge[*ADN ambiental (eDNA)*]
 
@@ -109,20 +111,202 @@ name: tipos de informacion
 class: nord-dark
 ### .fancy[*environmental DNA*]
 
-.pull-left[
+.content-box-yellow[
+.center[##.nord1[Cuantificación ]]]
 
-Single-species assays
+.content-box-purple[
+```{r,echo=F, out.width='80%',out.height='80%', fig.align='center'}
+knitr::include_graphics("images/pone.0122763.g003.png")
+```
 
-  -   .huge[*qPCR*]
-  -   ddPCR 
+]
+---
+name: tipos de informacion
+class: nord-dark
+### .fancy[*environmental DNA*]
+
+.content-box-yellow[
+.center[##.nord1[Composición] ]]
+
+.content-box-purple[
+
+```{r dataTABLE, echo = F, warning=FALSE ,message=FALSE}
+library(tidyverse)
+library(here)
+#library(kable)
+library(kableExtra)
+convert.names<- function(x){paste0("Sample", 1:length(x))}
+read_csv(here("data", "ASV_table_all_together.csv")) %>%  
+  left_join(read_csv(here("data", "Annotated.hashes.csv"))) %>% 
+  unite(family, genus, species, sep = "|", col = "taxa") %>% 
+  filter(taxa !="NA|NA|NA") %>% 
+ 
+  group_by(taxa) %>% tally %>% arrange(desc(n)) %>% slice(1:10) %>% 
+  pull(taxa) -> keepers 
+  read_csv(here("data", "ASV_table_all_together.csv")) %>%  
+  left_join(read_csv(here("data", "Annotated.hashes.csv"))) %>% 
+   unite(family, genus, species, sep = "|", col = "taxa", remove = F) %>%
+    mutate(label = case_when(is.na(species) ~  paste0(genus, " sp."),
+                                                   TRUE            ~ species)) %>% 
+  
+    filter(Miseq_run ==1,  taxa %in% keepers) %>% 
+    mutate(sample = fct_relabel(sample, convert.names)) %>% 
+    arrange(sample) %>% 
+    pivot_wider(id_cols = label, names_from = sample, values_from = nReads, values_fill = list (nReads = 0), values_fn = list(nReads= sum)) %>% 
+    rename (Taxa = label) -> data
+  data %>% 
+    select(1:7) %>% 
+    kable() %>% 
+    kable_styling(full_width = T, 
+                  bootstrap_options = "hover") %>% 
+       column_spec(1, italic  = T) %>% 
+       column_spec(2:6, width = '1in') -> nice.table
+   
+
+nice.table %>% 
+ scroll_box( height = "600px")
+```
+
 ]
 
-.pull-right[]
+---
+name: modos de obtenerla
+class: nord-dark
+### .fancy[*environmental DNA*]
 
 
+.content-box-purple[
+.nord1[
+## Single-species assays
+
+  -   ### *qPCR*
+  -   ### *ddPCR* 
+]]
+
+--
+
+
+.content-box-purple[
+.nord1[
+
+## Multi-species assays
+
+  - ###*metabarcoding*
+]]
 
 
 ---
+
+name: How to sample
+class: nord-dark, center, middle
+layout: false
+
+## .nord4[¿Cómo muestrear eDNA?]
+
+
+---
+
+name: Soil
+class: nord-light
+layout: true
+
+## .nord1[Metodos de muestreo]
+
+---
+
+name: Soil
+
+.center[ # Suelo]
+
+.content-box-purple[
+```{r,echo=F, out.width='80%',out.height='80%', fig.align='center'}
+knitr::include_graphics("images/night1.jpg")
+```
+
+]
+
+---
+
+name: Freshwater
+
+.center[ # Rios]
+
+.content-box-purple[
+```{r,echo=F, out.width='80%',out.height='80%', fig.align='center'}
+knitr::include_graphics("images/Freshwater.jpeg")
+```
+
+]
+
+---
+
+name: Freshwater
+
+.center[ # Aguas Costeras]
+
+.content-box-purple[
+```{r,echo=F, out.width='80%',out.height='80%', fig.align='center'}
+knitr::include_graphics("images/eDNA_16x9.jpg")
+knitr::include_graphics("images/procB2.png")
+```
+
+]
+
+---
+
+name: Freshwater
+
+.center[ # Aguas Abiertas]
+
+.content-box-purple[
+```{r,echo=F, out.width='80%',out.height='80%', fig.align='center'}
+knitr::include_graphics("images/CTD.jpg")
+
+```
+
+]
+
+---
+
+name: Freshwater
+
+.center[ # Aire]
+
+.content-box-purple[
+```{r,echo=F, out.width='80%',out.height='80%', fig.align='center'}
+knitr::include_graphics("images/eDNA_air.jpg")
+knitr::include_graphics("images/air.eDNA.png")
+```
+
+]
+
+
+---
+
+name: Intro to OA_eDNA
+class: nord-dark, center, middle
+layout: false
+
+## .nord4[Cambios en comunidades costeras con calentamiento y acidificación de los océanos]
+
+---
+
+name: template_OA
+class: nord-light, typo-selection
+background-image: linear-gradient(150deg,rgba(255, 255, 255, 100%),rgba(255, 255, 255, 50%),rgba(255, 255, 255, 20%)), url(images/eDNA_concept.png)
+background-size: cover
+layout: true
+
+# .center.nord9.bold[Ocean acidification and Warming]
+
+---
+
+
+
+name: OA_eDNA_template
+class: nord-light
+
+
 ### .fancy[ *Coastal Upwelling*]
 
 .left-column[
