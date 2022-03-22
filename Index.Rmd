@@ -284,23 +284,422 @@ knitr::include_graphics("images/air.eDNA.png")
 ---
 
 name: Intro to OA_eDNA
-class: nord-dark, center, middle
+class: inverse, center, middle
 layout: false
 
-## .nord4[Cambios en comunidades costeras con calentamiento y acidificación de los océanos]
+# .nord4[Cambios en comunidades costeras con calentamiento y acidificación de los océanos]
 
 ---
 
 name: template_OA
 class: nord-light, typo-selection
-background-image: linear-gradient(150deg,rgba(255, 255, 255, 100%),rgba(255, 255, 255, 50%),rgba(255, 255, 255, 20%)), url(images/eDNA_concept.png)
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)), url(images/OA_fondo.JPG)
 background-size: cover
 layout: true
 
-# .center.nord9.bold[Ocean acidification and Warming]
+### .center.nord9.bold[Ocean acidification and Warming]
+
+---
+</br>
+
+
+.center[<img src="images/sst.models.1.png" alt="sst" width="500" />]
+
+
+---
+</br>
+</br>
+.center[<img src="images/pH_Global_ave_E.png" alt="pH" width="800" />]
+---
+class: nord-dark
+## .center[.fancy[Afecta a muchas especies ]
+</br>
+
+.pull-left[
+<img src="images/oyster pg 2.jpg" alt="ostra" width="360" />
+]
+
+
+.pull-right[
+<img src="images/Limacina.png" alt="limacina" width="360" />]
+]
+
+
+
+???
+With global warming and increased pCO2 levels, there is little doubt that future marine communities will have to face a warmer, more acidic ocean
+---
+class: nord-dark
+name: A lot of info on many spp
+
+ <img src="images/paper_snip.OA.Oph.png" alt="oph" height="100" />
+
+--
+
+<img src="images/paper_snip.OA.Lima.png" alt="PCRbias"  />
+
+--
+
+<img src="images/paper_snip.OA.many.png" alt="PCRbias" height="100" />
+
+--
+
+<img src="images/paper_snip.OA.Meta.png" alt="PCRbias" height="120" />
+
+???
+
+Those effects are not happenning in a vacuum, but likely with Temp
+And in different directions
+---
+class: nord-dark
+Name: Ecosystem-wide: not so much
+
+<img src="images/paper_snip.OA.Comm1.png" alt="PCRbias" height=120  />
+
+
+<img src="images/paper_snip.OA.Comm2.png" alt="PCRbias" height="120" />
+
+.pull-left[
+<img src="images/paper_snip.OA.Comm3.png" alt="PCRbias" width=250/>
+]
+---
+name: WHy Hood Canal
+class: middle, nord-dark
+###.center[.fancy[.title[Why the Puget Sound?]]]
+
+Naturally occuring High *p*CO<sub>2</sub>  levels offer a view of not far-fetched conditions
+<img src="images/paper_snip.OA.why.png" alt="PCRbias" />
+
+---
+class: nord-dark
+name: Research plan
+
+##.center[.fancy[.title[Diseño experimental]]]
+
+.pull-left[
+
+```{r, message = F, echo = F, out.width= '90%'}
+library (leaflet)
+
+
+leaflet(data = read_csv(here("Data","site.info.csv"))) %>% 
+  addTiles() %>% 
+  setView(lat = 47.5, lng = -122.5, zoom = 7) %>% 
+  addMarkers(label = ~Site, 
+             labelOptions = labelOptions(interactive = FALSE, clickable = NULL, noHide = NULL,
+  permanent = FALSE, className = "", direction = "auto",
+  offset = c(1, 1), opacity = 1, textsize = "20px",
+  textOnly = FALSE, style = NULL, 
+  sticky = TRUE)
+  )
+```
+]
+
+--
+
+.pull-right[
+.content-box-yellow[
+.nord9[
+- Seasonal and temporal scale
+
+- Add Biological replication
+
+- Add technical replication
+]]
+.center[
+<img src="images/ridges.env.vars.png" alt="PCRbias" />
+]
+
+
+]
 
 ---
 
+
+class: nord-light
+name: Pipelines
+
+</br> 
+.center.nord9.bold[Processing of sequence data]
+</br> 
+.pull-left.oc-bg-black.opacity-40.nord-light.bold[
+
+* ####  .bold[A demultiplexing and clustering pipeline]
+
+.center[<img src="images/demultiplexer.png" alt="pipeline" width="350" />]
+
+.center[[github.com/ramongallego](https://github.com/ramongallego?tab=repositories) 
+<img src="images/GitHub-Mark-64px.png" alt="pipeline" />]
+ 
+ * A locus-specific classification tree with curated sequences 
+ 
+
+
+]
+
+
+.pull-right.oc-bg-black.opacity-10.nord-light.bold[
+ * QC and decontamination steps
+ 
+
+ .center[<img src="images/visual.anova.png" alt="pipeline" width="350" />]
+ 
+ 
+
+ 
+* High confidence in presence and identity 
+ 
+ 
+ 
+ ]
+
+
+---
+
+.content-box-blue[
+```{r dataTABLE1, echo = F, warning=FALSE ,message=FALSE, out.height='70%', out.width='70%'}
+convert.names<- function(x){paste0("Sample", 1:length(x))}
+read_csv(here("Data", "ASV_table_all_together.csv")) %>%  
+  left_join(read_csv(here("Data", "Annotated.hashes.csv"))) %>% 
+  unite(family, genus, species, sep = "|", col = "taxa") %>% 
+  filter(taxa !="NA|NA|NA") %>% 
+ 
+  group_by(taxa) %>% tally %>% arrange(desc(n)) %>% slice(1:10) %>% 
+  pull(taxa) -> keepers 
+  read_csv(here("Data", "ASV_table_all_together.csv")) %>%  
+  left_join(read_csv(here("Data", "Annotated.hashes.csv"))) %>% 
+   unite(family, genus, species, sep = "|", col = "taxa", remove = F) %>%
+    mutate(label = case_when(is.na(species) ~  paste0(genus, " sp."),
+                                                   TRUE            ~ species)) %>% 
+  
+    filter(Miseq_run ==1,  taxa %in% keepers) %>% 
+    mutate(sample = fct_relabel(sample, convert.names)) %>% 
+    arrange(sample) %>% 
+    pivot_wider(id_cols = label, names_from = sample, values_from = nReads, values_fill = list (nReads = 0), values_fn = list(nReads= sum)) %>% 
+    rename (Taxa = label) %>%
+    select(1:7) %>% 
+    kable() %>% 
+    kable_styling(full_width = T) %>% 
+       column_spec(1, italic  = T) %>% 
+       column_spec(2:6, width = '1in') -> nice.table
+   
+
+nice.table
+```
+]
+---
+
+
+.content-box-blue[
+```{r, echo = F, warning=FALSE ,message=FALSE, out.height='70%', out.width='70%'}
+nice.table %>% 
+  column_spec(2, width = '1in', background = "yellow") %>% 
+  row_spec(1,background = "yellow") 
+```
+
+]
+
+
+---
+class: nord-dark,  typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/eDNA_concept.png)
+background-size: cover
+layout: true
+### .center[eDNA metabarcoding and quantification]
+
+---
+
+class: nord-dark, middle, center
+name: PCR paper front
+
+
+
+<img src="images/UnderstandingPCR.png" alt="PCRbias" width="720" />
+
+???
+
+How to interpret the number of occurrences of a sequence in a sample?  
+
+---
+class: nord-dark, typo, typo-selection
+
+
+.left-column[
+
+
+ ### .nord4.bold[Differential Primer Affinity]
+
+ ### .nord4.bold[Strong effect on] .nord13.bold[DIVERSITY]
+]
+
+--
+
+.right-column[ 
+ 
+
+
+
+
+<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig4_HTML.png?as=webp" alt="PCRbias" width="700" />
+]
+
+
+---
+
+class: nord-dark
+
+
+
+
+
+## .center[ We can get .bold[quantitative] information from metabarcoding]
+
+
+.center[
+<img src="images/Understanding1.png" alt="PCRbias" width="540" />
+]
+
+---
+
+name: template_OA
+class: nord-light, typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)), url(images/OA_fondo.JPG)
+background-size: cover
+layout: true
+
+### .center.nord9.bold[Ocean acidification and Warming]
+
+---
+name: Shiny app
+class: nord-dark
+
+
+### .center[.nord12[Pregunta 1]: ¿Podemos detectar las fluctuaciones en presencia y abundancia de las especies de interés? ]
+
+</br>
+
+
+<video width="640" height="480" controls>
+<source src="images/Shiny.mov" type="video/mp4">
+</video>
+
+
+---
+class: nord-dark
+name: using both PA and eDNAindex
+layout: true
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+---
+
+### .center[.nord12[Pregunta 2]: ¿Hay distintas comunidades asociadas con <br> Temperatura y pH?]
+
+---
+class: nord-light
+### .nord12[Pregunta 2]: Community changes
+
+.center.huge[Similitud entre muestras en base a su composicion]
+
+---
+class: nord-light
+layout: false
+### .nord12[Pregunta 2]: Community changes
+
+.center.huge[Similitud entre muestras en base a su composicion]
+
+```{r, echo = F, warning=FALSE ,message=FALSE, out.height='70%', out.width='70%'}
+t(data[,2:11]) %>%
+  vegan::vegdist(upper = F, diag = T) %>%
+  round(digits = 3) %>%
+  as.matrix()-> dist.table
+dist.table[upper.tri(dist.table)] <- ""
+dist.table %>% 
+  as.data.frame() %>% 
+  kable() %>% 
+    kable_paper(full_width = T) %>% 
+  kable_styling(bootstrap_options = "striped") %>% 
+       column_spec(1, italic  = T) %>% 
+       column_spec(2:6, width = '1in') %>% 
+  column_spec(2, width = '1in', background = "yellow") 
+```
+
+---
+
+### .nord12[Pregunta 2]: Community changes
+.center[
+<img src="images/Figure2.2020-05-05_1.png" alt="PCRbias" width="560" >
+]
+---
+### .nord12[Pregunta 2]: Community changes
+.center[
+<img src="images/Figure2.2020-05-05_2.png" alt="PCRbias" width="600" >
+]
+---
+### .nord12[Pregunta 2]: Community changes
+.center[
+<img src="images/Figure2.2020-05-05_3.png" alt="PCRbias" width="600" >
+]
+---
+layout: true
+template: Dowehavewhatweneed
+name: Q3
+class: nord-dark
+
+---
+### .nord12[Pregunta 3]: ¿Qué pinta tiene el futuro Puget Sound para las especies de interés?
+
+</br>
+##.fancy[Modelos de presencia de cada taxon:]
+</br>
+* .huge.bold[Usamos una regresión logística (presencia/ausencia)]
+</br>
+
+* .huge.bold[Ajustado independiente en cada .nord13[área y estación]]
+</br>
+* .huge.bold[y con temperatura y pH como variables explicativas]
+</br>
+---
+
+name: Projections to 2095
+### .nord12.bold[Q3] - Estimando las condiciones en el Puget Sound (RCP8.5)
+
+
+.left-column[
+
+*  .huge[Usando la estimación de Khangaonkar et al, 2019]
+
+*  .huge[La predicción muestra algunos valores .nord13[ extremos] ]
+
+* .huge[La mayoría de los valores .nord13[se ven en el escenario actual]]
+
+]
+
+.right-column[
+<img src="images/Future_scenario.png" alt="PCRbias">]
+
+???
+
+Taking advantage from recently published models for the inner sea
+---
+
+
+
+
+
+
+## Cada especie responde de un modo distinto
+
+<img src="images/Most.varied.taxa.png" alt="PCRbias" >
+
+
+---
+
+
+## Cambios de diversidad en varios grupos
+
+<img src="images/Dinophyceaerastertitle.png" alt="PCRbias" width="850">
+
+---
 
 
 name: OA_eDNA_template

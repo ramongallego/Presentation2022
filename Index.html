@@ -9,9 +9,16 @@
     <script src="libs/kePrint/kePrint.js"></script>
     <link href="libs/lightable/lightable.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet/leaflet.js"></script>
+    <link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="libs/proj4/proj4.min.js"></script>
+    <script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding/leaflet.js"></script>
     <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
     <script src="libs/datatables-binding/datatables.js"></script>
-    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
     <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
     <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
@@ -346,23 +353,719 @@ name: Freshwater
 ---
 
 name: Intro to OA_eDNA
-class: nord-dark, center, middle
+class: inverse, center, middle
 layout: false
 
-## .nord4[Cambios en comunidades costeras con calentamiento y acidificación de los océanos]
+# .nord4[Cambios en comunidades costeras con calentamiento y acidificación de los océanos]
 
 ---
 
 name: template_OA
 class: nord-light, typo-selection
-background-image: linear-gradient(150deg,rgba(255, 255, 255, 100%),rgba(255, 255, 255, 50%),rgba(255, 255, 255, 20%)), url(images/eDNA_concept.png)
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)), url(images/OA_fondo.JPG)
 background-size: cover
 layout: true
 
-# .center.nord9.bold[Ocean acidification and Warming]
+### .center.nord9.bold[Ocean acidification and Warming]
+
+---
+&lt;/br&gt;
+
+
+.center[&lt;img src="images/sst.models.1.png" alt="sst" width="500" /&gt;]
+
+
+---
+&lt;/br&gt;
+&lt;/br&gt;
+.center[&lt;img src="images/pH_Global_ave_E.png" alt="pH" width="800" /&gt;]
+---
+class: nord-dark
+## .center[.fancy[Afecta a muchas especies ]
+&lt;/br&gt;
+
+.pull-left[
+&lt;img src="images/oyster pg 2.jpg" alt="ostra" width="360" /&gt;
+]
+
+
+.pull-right[
+&lt;img src="images/Limacina.png" alt="limacina" width="360" /&gt;]
+]
+
+
+
+???
+With global warming and increased pCO2 levels, there is little doubt that future marine communities will have to face a warmer, more acidic ocean
+---
+class: nord-dark
+name: A lot of info on many spp
+
+ &lt;img src="images/paper_snip.OA.Oph.png" alt="oph" height="100" /&gt;
+
+--
+
+&lt;img src="images/paper_snip.OA.Lima.png" alt="PCRbias"  /&gt;
+
+--
+
+&lt;img src="images/paper_snip.OA.many.png" alt="PCRbias" height="100" /&gt;
+
+--
+
+&lt;img src="images/paper_snip.OA.Meta.png" alt="PCRbias" height="120" /&gt;
+
+???
+
+Those effects are not happenning in a vacuum, but likely with Temp
+And in different directions
+---
+class: nord-dark
+Name: Ecosystem-wide: not so much
+
+&lt;img src="images/paper_snip.OA.Comm1.png" alt="PCRbias" height=120  /&gt;
+
+
+&lt;img src="images/paper_snip.OA.Comm2.png" alt="PCRbias" height="120" /&gt;
+
+.pull-left[
+&lt;img src="images/paper_snip.OA.Comm3.png" alt="PCRbias" width=250/&gt;
+]
+---
+name: WHy Hood Canal
+class: middle, nord-dark
+###.center[.fancy[.title[Why the Puget Sound?]]]
+
+Naturally occuring High *p*CO&lt;sub&gt;2&lt;/sub&gt;  levels offer a view of not far-fetched conditions
+&lt;img src="images/paper_snip.OA.why.png" alt="PCRbias" /&gt;
+
+---
+class: nord-dark
+name: Research plan
+
+##.center[.fancy[.title[Diseño experimental]]]
+
+.pull-left[
+
+<div id="htmlwidget-4b071874817fc4135800" style="width:90%;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4b071874817fc4135800">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[48.449827,48.545085,48.5145,47.462959,47.35981,47.856772,47.608961,47.378431],[-122.963231,-123.012028,-123.151,-123.103774,-123.155597,-122.607721,-122.984734,-122.97483],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["CP","FH","LK","LL","PO","SA","TR","TW"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[1,1],"textsize":"20px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[47.5,-122.5],7,[]],"limits":{"lat":[47.35981,48.545085],"lng":[-123.155597,-122.607721]}},"evals":[],"jsHooks":[]}</script>
+]
+
+--
+
+.pull-right[
+.content-box-yellow[
+.nord9[
+- Seasonal and temporal scale
+
+- Add Biological replication
+
+- Add technical replication
+]]
+.center[
+&lt;img src="images/ridges.env.vars.png" alt="PCRbias" /&gt;
+]
+
+
+]
 
 ---
 
+
+class: nord-light
+name: Pipelines
+
+&lt;/br&gt; 
+.center.nord9.bold[Processing of sequence data]
+&lt;/br&gt; 
+.pull-left.oc-bg-black.opacity-40.nord-light.bold[
+
+* ####  .bold[A demultiplexing and clustering pipeline]
+
+.center[&lt;img src="images/demultiplexer.png" alt="pipeline" width="350" /&gt;]
+
+.center[[github.com/ramongallego](https://github.com/ramongallego?tab=repositories) 
+&lt;img src="images/GitHub-Mark-64px.png" alt="pipeline" /&gt;]
+ 
+ * A locus-specific classification tree with curated sequences 
+ 
+
+
+]
+
+
+.pull-right.oc-bg-black.opacity-10.nord-light.bold[
+ * QC and decontamination steps
+ 
+
+ .center[&lt;img src="images/visual.anova.png" alt="pipeline" width="350" /&gt;]
+ 
+ 
+
+ 
+* High confidence in presence and identity 
+ 
+ 
+ 
+ ]
+
+
+---
+
+.content-box-blue[
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Taxa &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample1 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample2 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample3 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample4 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample5 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample6 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Phaeocystis antarctica &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 1929 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 138 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 11386 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2590 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Rhizosolenia setigera &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Micromonas pusilla &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 264 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 233 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 216 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Bathycoccus prasinos &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 1362 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 203 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 433 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Cylindrotheca closterium &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Balanus sp. &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Thalassiosira nordenskioeldii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Ditylum brightwellii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Minutocellus polymorphus &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Chaetoceros socialis &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+---
+
+
+.content-box-blue[
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Taxa &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample1 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample2 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample3 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample4 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample5 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample6 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;background-color: yellow !important;"&gt; Phaeocystis antarctica &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;background-color: yellow !important;"&gt; 1929 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 138 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 11386 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: yellow !important;"&gt; 2590 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Rhizosolenia setigera &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Micromonas pusilla &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 264 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 233 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 216 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Bathycoccus prasinos &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 1362 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 203 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 433 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Cylindrotheca closterium &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Balanus sp. &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Thalassiosira nordenskioeldii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Ditylum brightwellii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Minutocellus polymorphus &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Chaetoceros socialis &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+]
+
+
+---
+class: nord-dark,  typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/eDNA_concept.png)
+background-size: cover
+layout: true
+### .center[eDNA metabarcoding and quantification]
+
+---
+
+class: nord-dark, middle, center
+name: PCR paper front
+
+
+
+&lt;img src="images/UnderstandingPCR.png" alt="PCRbias" width="720" /&gt;
+
+???
+
+How to interpret the number of occurrences of a sequence in a sample?  
+
+---
+class: nord-dark, typo, typo-selection
+
+
+.left-column[
+
+
+ ### .nord4.bold[Differential Primer Affinity]
+
+ ### .nord4.bold[Strong effect on] .nord13.bold[DIVERSITY]
+]
+
+--
+
+.right-column[ 
+ 
+
+
+
+
+&lt;img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-48546-x/MediaObjects/41598_2019_48546_Fig4_HTML.png?as=webp" alt="PCRbias" width="700" /&gt;
+]
+
+
+---
+
+class: nord-dark
+
+
+
+
+
+## .center[ We can get .bold[quantitative] information from metabarcoding]
+
+
+.center[
+&lt;img src="images/Understanding1.png" alt="PCRbias" width="540" /&gt;
+]
+
+---
+
+name: template_OA
+class: nord-light, typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)), url(images/OA_fondo.JPG)
+background-size: cover
+layout: true
+
+### .center.nord9.bold[Ocean acidification and Warming]
+
+---
+name: Shiny app
+class: nord-dark
+
+
+### .center[.nord12[Pregunta 1]: ¿Podemos detectar las fluctuaciones en presencia y abundancia de las especies de interés? ]
+
+&lt;/br&gt;
+
+
+&lt;video width="640" height="480" controls&gt;
+&lt;source src="images/Shiny.mov" type="video/mp4"&gt;
+&lt;/video&gt;
+
+
+---
+class: nord-dark
+name: using both PA and eDNAindex
+layout: true
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+---
+
+### .center[.nord12[Pregunta 2]: ¿Hay distintas comunidades asociadas con &lt;br&gt; Temperatura y pH?]
+
+---
+class: nord-light
+### .nord12[Pregunta 2]: Community changes
+
+.center.huge[Similitud entre muestras en base a su composicion]
+
+---
+class: nord-light
+layout: false
+### .nord12[Pregunta 2]: Community changes
+
+.center.huge[Similitud entre muestras en base a su composicion]
+
+&lt;table class=" lightable-paper table table-striped" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample1 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample2 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample3 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample4 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample5 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample6 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample7 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample8 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample9 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample10 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample2 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.989 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample3 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.884 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample4 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.69 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.969 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.977 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample5 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample6 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.211 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.812 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.918 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.6 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample7 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.912 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.602 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.67 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.951 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.748 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample8 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.858 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.177 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.936 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.739 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.668 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample9 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.44 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.716 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.943 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.511 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.239 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.817 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.733 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample10 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.966 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.937 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.967 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.927 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.951 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.882 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.948 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### .nord12[Pregunta 2]: Community changes
+.center[
+&lt;img src="images/Figure2.2020-05-05_1.png" alt="PCRbias" width="560" &gt;
+]
+---
+### .nord12[Pregunta 2]: Community changes
+.center[
+&lt;img src="images/Figure2.2020-05-05_2.png" alt="PCRbias" width="600" &gt;
+]
+---
+### .nord12[Pregunta 2]: Community changes
+.center[
+&lt;img src="images/Figure2.2020-05-05_3.png" alt="PCRbias" width="600" &gt;
+]
+---
+layout: true
+template: Dowehavewhatweneed
+name: Q3
+class: nord-dark
+
+---
+### .nord12[Pregunta 3]: ¿Qué pinta tiene el futuro Puget Sound para las especies de interés?
+
+&lt;/br&gt;
+##.fancy[Modelos de presencia de cada taxon:]
+&lt;/br&gt;
+* .huge.bold[Usamos una regresión logística (presencia/ausencia)]
+&lt;/br&gt;
+
+* .huge.bold[Ajustado independiente en cada .nord13[área y estación]]
+&lt;/br&gt;
+* .huge.bold[y con temperatura y pH como variables explicativas]
+&lt;/br&gt;
+---
+
+name: Projections to 2095
+### .nord12.bold[Q3] - Estimando las condiciones en el Puget Sound (RCP8.5)
+
+
+.left-column[
+
+*  .huge[Usando la estimación de Khangaonkar et al, 2019]
+
+*  .huge[La predicción muestra algunos valores .nord13[ extremos] ]
+
+* .huge[La mayoría de los valores .nord13[se ven en el escenario actual]]
+
+]
+
+.right-column[
+&lt;img src="images/Future_scenario.png" alt="PCRbias"&gt;]
+
+???
+
+Taking advantage from recently published models for the inner sea
+---
+
+
+
+
+
+
+## Cada especie responde de un modo distinto
+
+&lt;img src="images/Most.varied.taxa.png" alt="PCRbias" &gt;
+
+
+---
+
+
+## Cambios de diversidad en varios grupos
+
+&lt;img src="images/Dinophyceaerastertitle.png" alt="PCRbias" width="850"&gt;
+
+---
 
 
 name: OA_eDNA_template
@@ -664,8 +1367,8 @@ class: nord-light
 
 ---
 
-<div id="htmlwidget-e4ac8e7c612de77f0880" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e4ac8e7c612de77f0880">{"x":{"filter":"none","vertical":false,"data":[["Agonidae","Agonidae","Alopiidae","Alopiidae","Anarhichadidae","Anarhichadidae","Anoplopomatidae","Anoplopomatidae","Atherinopsidae","Bathylagidae","Bathylagidae","Bathylagidae","Bathymasteridae","Belonidae","Belonidae","Carangidae","Carangidae","Carangidae","Carcharhinidae","Carcharhinidae","Centrolophidae","Centrolophidae","Chimaeridae","Chimaeridae","Clupeidae","Clupeidae","Clupeidae","Clupeidae","Clupeidae","Clupeidae","Cottidae","Cottidae","Cottidae","Cottidae","Cottidae","Cottidae","Cryptacanthodidae","Embiotocidae","Embiotocidae","Embiotocidae","Embiotocidae","Engraulidae","Engraulidae","Gadidae","Gadidae","Gonostomatidae","Hexagrammidae","Hexagrammidae","Jordaniidae","Liparidae","Liparidae","Liparidae","Liparidae","Liparidae","Merlucciidae","Merlucciidae","Merlucciidae","Microstomatidae","Microstomatidae","Molidae","Molidae","Myctophidae","Myctophidae","Myctophidae","Myctophidae","Myctophidae","Myctophidae","Osmeridae","Osmeridae","Osmeridae","Osmeridae","Osmeridae","Paralepididae","Paralepididae","Paralepididae","Paralepididae","Paralichthyidae","Paralichthyidae","Paralichthyidae","Paralichthyidae","Pholidae","Pholidae","Platytroctidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Rajidae","Rajidae","Rajidae","Rajidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Sciaenidae","Scombridae","Scombridae","Scombridae","Scyliorhinidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Squalidae","Stichaeidae","Stomiidae","Zaniolepididae","Zaniolepididae","Zoarcidae","Zoarcidae","Zoarcidae","Zoarcidae"],["Chesnonia verrucosa","NA","Isurus oxyrinchus","Lamna ditropis","Anarrhichthys ocellatus","NA","Anoplopoma fimbria","NA","NA","Bathylagus stilbius","Lipolagus ochotensis","NA","Ronquilus jordani","Cololabis saira","NA","NA","NA","Trachurus symmetricus","NA","Prionace glauca","Icichthys lockingtoni","NA","Hydrolagus colliei","NA","Alosa fallax","NA","Clupea pallasii","NA","NA","Sardinops sagax","Artedius fenestralis|lateralis","Artedius harringtoni","NA","Chitonotus pugetensis","Leptocottus armatus","NA","Cryptacanthodes giganteus","Embiotoca jacksoni|lateralis","NA","Rhacochilus vacca","Zalembius rosaceus","Engraulis mordax","NA","Microgadus proximus","NA","NA","Hexagrammos decagrammus","Ophiodon elongatus","Jordania zonope","Liparis florae","Liparis fucensis|callyodon","Liparis pulchellus","NA","NA","Merluccius angustimanus|productus","Merluccius productus","NA","NA","Nansenia candida","Mola mola","NA","Diaphus theta","NA","NA","Nannobrachium regale","NA","Stenobrachius leucopsarus","Allosmerus elongatus","Hypomesus pretiosus","NA","Spirinchus starksi","Thaleichthys pacificus","Lestidiops ringens","Magnisudis atlantica","NA","NA","Citharichthys stigmaeus","Citharichthys xanthostigma|sordidus","NA","NA","NA","Pholis laeta","Sagamichthys abei","Atheresthes evermanni|stomias","NA","Eopsetta jordani","Glyptocephalus zachirus","Isopsetta isolepis","Lyopsetta exilis","Microstomus pacificus","NA","Parophrys vetulus","Pleuronichthys decurrens","Psettichthys melanostictus","NA","Raja binoculata","Raja inornata","Raja rhina","NA","NA","Oncorhynchus keta","Oncorhynchus kisutch","Oncorhynchus tshawytscha","NA","Salvelinus environmental|leucomaenis|fontinalis","Genyonemus lineatus","NA","Scomber japonicus","Thunnus alalunga|obesus","Apristurus brunneus","NA","NA","Sebastes aleutianus|melanostictus","Sebastes aurora|chlorostictus|ensifer|eos|exsul|helvomaculatus|nigrocinctus|notius|rosenblatti|rufus|simulator|spinorbis","Sebastes chrysomelas|caurinus|maliger","Sebastes cortezi|melanosema|sinensis|diploproa","Sebastes elongatus","Sebastes ensifer","Sebastes entomelas","Sebastes entomelas|mystinus","Sebastes jordani","Sebastes miniatus","Sebastes pinniger","Sebastes polyspinis|variabilis|ciliatus|crameri","Sebastes saxicola","Sebastes sp. NA|flavidus|melanops|serranoides","Sebastes sp. UW150000|glaucus|matsubarae|vulpes|aleutianus|trivittatus|borealis|proriger|diploproa","Sebastes sp. UW150443|emphaeus|variegatus|wilsoni|zacentrus","Sebastolobus altivelis","Squalus acanthias","Poroclinus rothrocki","Tactostoma macropus","NA","Zaniolepis latipinnis","Lycodapus mandibularis","Lycodes cortezianus","Lycodes diapterus","NA"],[319,1360,1089,22409,33082,541,83984,28113,20,74913,48936,184301,164,59269,1415,28353,141857,2113546,3078,55001,19365,2248,21964,540,4541,805,1196151,1399,36133,332681,2267,4471,52,1378,25143,96484,10015,101,1870,507,6737,192102,150995,106325,1987,204,11402,132675,360,1552,431,2850,586,168,6599,2179647,388737,156759,236544,4607,4679,290274,148167,86103,90059,174608,396011,11887,32788,42792,1364,12624,21113,27705,1101,9981,68404,1029251,276994,3447,319,4487,6953,29523,3382,79520,15318,190259,107769,42019,836145,16343,353,6164,26777,146316,33741,103425,677230,144852,97223,187,409754,158,2257,11028,32921,196735,315339,299,16311,86084,2629,17894,44477,257012,22472,174,26652,59341,68175,2006,44,10278,19656,111642,3014,341076,839,130597,1715,94218,1569,2599,5702,28969,5329,343251],[1,1,4,7,4,1,6,4,1,2,2,7,1,15,3,19,36,61,3,10,10,6,9,1,3,2,40,1,15,24,3,1,1,2,3,10,3,1,1,1,1,24,20,8,1,1,2,9,1,1,1,2,1,1,1,73,52,2,11,3,2,23,9,16,1,13,19,3,4,13,2,5,1,2,1,1,12,46,48,7,1,2,1,1,1,7,7,10,10,6,35,1,1,3,13,18,2,11,11,14,4,2,12,1,1,2,5,17,7,2,12,22,1,2,6,3,5,1,3,9,7,1,1,1,1,16,3,14,1,15,1,3,2,1,1,1,1,8]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Family<\/th>\n      <th>Species<\/th>\n      <th>#Sequences<\/th>\n      <th>#samples found<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"fpt","pagelenght":8,"columnDefs":[{"className":"dt-right","targets":[2,3]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-25e928286f2cd9beaac7" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-25e928286f2cd9beaac7">{"x":{"filter":"none","vertical":false,"data":[["Agonidae","Agonidae","Alopiidae","Alopiidae","Anarhichadidae","Anarhichadidae","Anoplopomatidae","Anoplopomatidae","Atherinopsidae","Bathylagidae","Bathylagidae","Bathylagidae","Bathymasteridae","Belonidae","Belonidae","Carangidae","Carangidae","Carangidae","Carcharhinidae","Carcharhinidae","Centrolophidae","Centrolophidae","Chimaeridae","Chimaeridae","Clupeidae","Clupeidae","Clupeidae","Clupeidae","Clupeidae","Clupeidae","Cottidae","Cottidae","Cottidae","Cottidae","Cottidae","Cottidae","Cryptacanthodidae","Embiotocidae","Embiotocidae","Embiotocidae","Embiotocidae","Engraulidae","Engraulidae","Gadidae","Gadidae","Gonostomatidae","Hexagrammidae","Hexagrammidae","Jordaniidae","Liparidae","Liparidae","Liparidae","Liparidae","Liparidae","Merlucciidae","Merlucciidae","Merlucciidae","Microstomatidae","Microstomatidae","Molidae","Molidae","Myctophidae","Myctophidae","Myctophidae","Myctophidae","Myctophidae","Myctophidae","Osmeridae","Osmeridae","Osmeridae","Osmeridae","Osmeridae","Paralepididae","Paralepididae","Paralepididae","Paralepididae","Paralichthyidae","Paralichthyidae","Paralichthyidae","Paralichthyidae","Pholidae","Pholidae","Platytroctidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Rajidae","Rajidae","Rajidae","Rajidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Sciaenidae","Scombridae","Scombridae","Scombridae","Scyliorhinidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Squalidae","Stichaeidae","Stomiidae","Zaniolepididae","Zaniolepididae","Zoarcidae","Zoarcidae","Zoarcidae","Zoarcidae"],["Chesnonia verrucosa","NA","Isurus oxyrinchus","Lamna ditropis","Anarrhichthys ocellatus","NA","Anoplopoma fimbria","NA","NA","Bathylagus stilbius","Lipolagus ochotensis","NA","Ronquilus jordani","Cololabis saira","NA","NA","NA","Trachurus symmetricus","NA","Prionace glauca","Icichthys lockingtoni","NA","Hydrolagus colliei","NA","Alosa fallax","NA","Clupea pallasii","NA","NA","Sardinops sagax","Artedius fenestralis|lateralis","Artedius harringtoni","NA","Chitonotus pugetensis","Leptocottus armatus","NA","Cryptacanthodes giganteus","Embiotoca jacksoni|lateralis","NA","Rhacochilus vacca","Zalembius rosaceus","Engraulis mordax","NA","Microgadus proximus","NA","NA","Hexagrammos decagrammus","Ophiodon elongatus","Jordania zonope","Liparis florae","Liparis fucensis|callyodon","Liparis pulchellus","NA","NA","Merluccius angustimanus|productus","Merluccius productus","NA","NA","Nansenia candida","Mola mola","NA","Diaphus theta","NA","NA","Nannobrachium regale","NA","Stenobrachius leucopsarus","Allosmerus elongatus","Hypomesus pretiosus","NA","Spirinchus starksi","Thaleichthys pacificus","Lestidiops ringens","Magnisudis atlantica","NA","NA","Citharichthys stigmaeus","Citharichthys xanthostigma|sordidus","NA","NA","NA","Pholis laeta","Sagamichthys abei","Atheresthes evermanni|stomias","NA","Eopsetta jordani","Glyptocephalus zachirus","Isopsetta isolepis","Lyopsetta exilis","Microstomus pacificus","NA","Parophrys vetulus","Pleuronichthys decurrens","Psettichthys melanostictus","NA","Raja binoculata","Raja inornata","Raja rhina","NA","NA","Oncorhynchus keta","Oncorhynchus kisutch","Oncorhynchus tshawytscha","NA","Salvelinus environmental|leucomaenis|fontinalis","Genyonemus lineatus","NA","Scomber japonicus","Thunnus alalunga|obesus","Apristurus brunneus","NA","NA","Sebastes aleutianus|melanostictus","Sebastes aurora|chlorostictus|ensifer|eos|exsul|helvomaculatus|nigrocinctus|notius|rosenblatti|rufus|simulator|spinorbis","Sebastes chrysomelas|caurinus|maliger","Sebastes cortezi|melanosema|sinensis|diploproa","Sebastes elongatus","Sebastes ensifer","Sebastes entomelas","Sebastes entomelas|mystinus","Sebastes jordani","Sebastes miniatus","Sebastes pinniger","Sebastes polyspinis|variabilis|ciliatus|crameri","Sebastes saxicola","Sebastes sp. NA|flavidus|melanops|serranoides","Sebastes sp. UW150000|glaucus|matsubarae|vulpes|aleutianus|trivittatus|borealis|proriger|diploproa","Sebastes sp. UW150443|emphaeus|variegatus|wilsoni|zacentrus","Sebastolobus altivelis","Squalus acanthias","Poroclinus rothrocki","Tactostoma macropus","NA","Zaniolepis latipinnis","Lycodapus mandibularis","Lycodes cortezianus","Lycodes diapterus","NA"],[319,1360,1089,22409,33082,541,83984,28113,20,74913,48936,184301,164,59269,1415,28353,141857,2113546,3078,55001,19365,2248,21964,540,4541,805,1196151,1399,36133,332681,2267,4471,52,1378,25143,96484,10015,101,1870,507,6737,192102,150995,106325,1987,204,11402,132675,360,1552,431,2850,586,168,6599,2179647,388737,156759,236544,4607,4679,290274,148167,86103,90059,174608,396011,11887,32788,42792,1364,12624,21113,27705,1101,9981,68404,1029251,276994,3447,319,4487,6953,29523,3382,79520,15318,190259,107769,42019,836145,16343,353,6164,26777,146316,33741,103425,677230,144852,97223,187,409754,158,2257,11028,32921,196735,315339,299,16311,86084,2629,17894,44477,257012,22472,174,26652,59341,68175,2006,44,10278,19656,111642,3014,341076,839,130597,1715,94218,1569,2599,5702,28969,5329,343251],[1,1,4,7,4,1,6,4,1,2,2,7,1,15,3,19,36,61,3,10,10,6,9,1,3,2,40,1,15,24,3,1,1,2,3,10,3,1,1,1,1,24,20,8,1,1,2,9,1,1,1,2,1,1,1,73,52,2,11,3,2,23,9,16,1,13,19,3,4,13,2,5,1,2,1,1,12,46,48,7,1,2,1,1,1,7,7,10,10,6,35,1,1,3,13,18,2,11,11,14,4,2,12,1,1,2,5,17,7,2,12,22,1,2,6,3,5,1,3,9,7,1,1,1,1,16,3,14,1,15,1,3,2,1,1,1,1,8]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Family<\/th>\n      <th>Species<\/th>\n      <th>#Sequences<\/th>\n      <th>#samples found<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"fpt","pagelenght":8,"columnDefs":[{"className":"dt-right","targets":[2,3]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 
 ---
@@ -731,8 +1434,8 @@ class: nord-light
 
 
 
-<div id="htmlwidget-6b308f6002e004b4749e" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6b308f6002e004b4749e">{"x":{"filter":"none","vertical":false,"data":[["Transect","Position","Upwelling","Residual","Total"],[7,2,1,103,113],[5.56495777946375,3.02510291469714,0.653711077169392,41.999499306796,51.2432710781263],[0.108598800630415,0.0590341492853767,0.0127570130363601,0.819610037047848,1],[1.94965130790777,3.70939660420412,1.60316770580054,null,null],[0.0001,0.0001,0.0255,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>term<\/th>\n      <th>df<\/th>\n      <th>SumOfSqs<\/th>\n      <th>R2<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":[1,2,3,4,5]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
+<div id="htmlwidget-dc7d77de1940960e2143" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-dc7d77de1940960e2143">{"x":{"filter":"none","vertical":false,"data":[["Transect","Position","Upwelling","Residual","Total"],[7,2,1,103,113],[5.56495777946375,3.02510291469714,0.653711077169392,41.999499306796,51.2432710781263],[0.108598800630415,0.0590341492853767,0.0127570130363601,0.819610037047848,1],[1.94965130790777,3.70939660420412,1.60316770580054,null,null],[0.0001,0.0001,0.0255,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>term<\/th>\n      <th>df<\/th>\n      <th>SumOfSqs<\/th>\n      <th>R2<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":[1,2,3,4,5]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
 
 
   - PERMANOVA, and BC use .content-box-yellow[one value] to capture dissimilarity between two samples
@@ -749,8 +1452,8 @@ class: nord-light
 
 is not constrained to one value per sample pair, but a matrix of proportions
 
-<div id="htmlwidget-155afee25415ebaa5671" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-155afee25415ebaa5671">{"x":{"filter":"none","vertical":false,"data":[["S1","S2","...","Sn"],[50,4000,0,0],[300,250,0,400],["-","-","-","-"],[5000,300,0,350]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Sample<\/th>\n      <th>Spp1<\/th>\n      <th>Spp2<\/th>\n      <th>Spp...<\/th>\n      <th>Sppn<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"className":"dt-center","targets":[0,1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0f5cb8a87948115c47f0" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0f5cb8a87948115c47f0">{"x":{"filter":"none","vertical":false,"data":[["S1","S2","...","Sn"],[50,4000,0,0],[300,250,0,400],["-","-","-","-"],[5000,300,0,350]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Sample<\/th>\n      <th>Spp1<\/th>\n      <th>Spp2<\/th>\n      <th>Spp...<\/th>\n      <th>Sppn<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"className":"dt-center","targets":[0,1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ---
 
 ## Community Analysis - Another way
@@ -763,8 +1466,8 @@ is not constrained to one value per sample pair, but a matrix of proportions
 
 is not constrained to one value per sample pair, but a matrix of proportions
 
-<div id="htmlwidget-8779cce76b2d0090857d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8779cce76b2d0090857d">{"x":{"filter":"none","vertical":false,"data":[["S1","S2","...","Sn"],[0.00934579439252336,0.879120879120879,0,0],[0.0560747663551402,0.0549450549450549,0,0.533333333333333],["-","-","-","-"],[0.934579439252336,0.0659340659340659,0,0.466666666666667]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Sample<\/th>\n      <th>Spp1<\/th>\n      <th>Spp2<\/th>\n      <th>Spp...<\/th>\n      <th>Sppn<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"className":"dt-center","targets":[0,1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
+<div id="htmlwidget-4c3d4003a354defc320e" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4c3d4003a354defc320e">{"x":{"filter":"none","vertical":false,"data":[["S1","S2","...","Sn"],[0.00934579439252336,0.879120879120879,0,0],[0.0560747663551402,0.0549450549450549,0,0.533333333333333],["-","-","-","-"],[0.934579439252336,0.0659340659340659,0,0.466666666666667]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Sample<\/th>\n      <th>Spp1<\/th>\n      <th>Spp2<\/th>\n      <th>Spp...<\/th>\n      <th>Sppn<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"className":"dt-center","targets":[0,1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
 
 ---
 
@@ -772,8 +1475,8 @@ is not constrained to one value per sample pair, but a matrix of proportions
 
   - Dirichilet does not bode well with many zeroes
   - Combining taxa into functional categories
-<div id="htmlwidget-cf3bd375690b435bfee7" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cf3bd375690b435bfee7">{"x":{"filter":"none","vertical":false,"data":[["Marine; bathydemersal","Marine; bathypelagic","Marine; benthopelagic","Marine; brackish; benthopelagic","Marine; brackish; demersal","Marine; brackish; pelagic-neritic","Marine; demersal","Marine; demersal; non-migratory"],[2,19,2,2,2,3,70,1],[1,8,2,2,1,1,18,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Group<\/th>\n      <th>Number of taxa<\/th>\n      <th>Number of families<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"className":"dt-center","targets":[0,1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-26923961e9924af448fa" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-26923961e9924af448fa">{"x":{"filter":"none","vertical":false,"data":[["Marine; bathydemersal","Marine; bathypelagic","Marine; benthopelagic","Marine; brackish; benthopelagic","Marine; brackish; demersal","Marine; brackish; pelagic-neritic","Marine; demersal","Marine; demersal; non-migratory"],[2,19,2,2,2,3,70,1],[1,8,2,2,1,1,18,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Group<\/th>\n      <th>Number of taxa<\/th>\n      <th>Number of families<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"className":"dt-center","targets":[0,1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
   
 --
 
