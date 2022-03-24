@@ -152,10 +152,10 @@ th, td { padding: 5px; }
 .content-box-red,
 .content-box-yellow {
   box-sizing: border-box;
-  border-radius: 15px;
-  margin: 0 0 15px;
+  border-radius: 5px;
+  margin: 0 0 5px;
   overflow: hidden;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 20px 0px 0px;
   width: 100%;
 }
 .content-box-blue { background-color: #F0F8FF; }

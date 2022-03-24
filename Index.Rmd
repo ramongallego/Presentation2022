@@ -86,7 +86,7 @@ knitr::include_graphics("images/PNW.jpg")
 
 .pull-right[
 ```{r, echo = F}
-knitr::include_graphics("images/RGS.jpg")
+knitr::include_graphics("images/RGS.JPG")
 ```
 ]
 
@@ -269,11 +269,12 @@ knitr::include_graphics("images/procB2.png")
 
 name: Freshwater
 
-.center[ # Aguas Abiertas]
+.center[ ## Aguas Abiertas]
 
 .content-box-purple[
 ```{r,echo=F, out.width='80%',out.height='80%', fig.align='center'}
 knitr::include_graphics("images/CTD.jpg")
+knitr::include_graphics("images/ProcB_hake.png")
 
 ```
 
@@ -745,11 +746,12 @@ class: nord-light
 ### .fancy[ *Coastal Upwelling*]
 
 .left-column[
-
+.content-box-yellow[
 - Prevailing winds displace surface waters
 
 - Deep water comes to surface
 - Brings up nutrient rich, low oxygen water]
+]
 
 .right-column[
 ```{r,echo=F, out.width='80%', fig.align='center'}
@@ -884,6 +886,32 @@ background-size: 25% 100%
 ```{r,echo=F,  out.width = '70%',fig.align='right'}
 knitr::include_graphics("images/filter_crew2.png")
 ```
+
+---
+name: qPCR results1
+class: nord-light
+
+
+
+## *eDNA variance is similar to that of Acoustics*
+
+```{r,echo=F,  out.width = '70%',fig.align='center'}
+knitr::include_graphics("images/ProcB_fig2c.png")
+```
+
+
+---
+name: qPCR results2
+class: nord-light
+
+
+
+## *eDNA offers comparable results to those of Acoustics*
+
+```{r,echo=F,  out.width = '90%',fig.align='center'}
+knitr::include_graphics("images/ProcB_fig3a.png")
+```
+
 
 ---
 name: eDNA sampling
