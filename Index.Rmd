@@ -888,6 +888,19 @@ knitr::include_graphics("images/filter_crew2.png")
 ```
 
 ---
+name: paper out
+
+class:nord-light
+
+
+## *eDNA can be used for stock assessment*
+
+```{r,echo=F,  out.width = '100%',fig.align='center'}
+knitr::include_graphics("images/ProcB_hake.png")
+```
+
+
+---
 name: qPCR results1
 class: nord-light
 
@@ -1371,7 +1384,7 @@ background-size: cover
 
 ]
 
---
+
 
 .pull-right[
 
@@ -1471,7 +1484,7 @@ background-size: cover
 ## .center.bold[Agradecimientos]
 </br>
 .content-box-gray[.nord1[
-- ###  **collaboradores**: Krista Nichols, Ana Laca, Linda Park, Ole Shelton, Ryan Kelly
+- ###  **collaboradores**: Krista Nichols, Ana Laca, Tiara Moore, Linda Park, Ole Shelton, Ryan Kelly
 - ### **Tripulacion y cientificos del RV Shimada **
 
 - ### **Compañeros de UW, NOAA y UAM**
@@ -1491,5 +1504,5 @@ class: middle, nord-dark
 
 
 
- 
+.footnote[Slides available at .nord8.bold[ramongallego.github.io/Presentation2022/Index.html]]
 
