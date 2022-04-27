@@ -144,6 +144,7 @@ th, td { padding: 5px; }
     background-color: #e2e2e2;
 }
 .content-box-blue,
+.content-box-white,
 .content-box-gray,
 .content-box-grey,
 .content-box-army,
@@ -166,8 +167,9 @@ th, td { padding: 5px; }
 .content-box-purple { background-color: #e2e2f9; }
 .content-box-red { background-color: #ffcccc; }
 .content-box-yellow { background-color: #fef5c4; }
+.content-box-white { background-color: #FFFFFF; }
 .content-box-blue .remark-inline-code,
-.content-box-blue .remark-inline-code,
+.content-box-white .remark-inline-code,
 .content-box-gray .remark-inline-code,
 .content-box-grey .remark-inline-code,
 .content-box-army .remark-inline-code,
