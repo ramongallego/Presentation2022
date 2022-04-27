@@ -122,7 +122,7 @@ class: nord-dark
 .center[##.nord1[Cuantificación ]]]
 
 .content-box-purple[
-```{r,echo=F, out.width='80%',out.height='80%', fig.align='center'}
+```{r,echo=F, out.width='70%',out.height='70%', fig.align='center'}
 knitr::include_graphics("images/pone.0122763.g003.png")
 ```
 
