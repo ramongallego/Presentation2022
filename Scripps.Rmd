@@ -196,6 +196,56 @@ class: nord-dark
   - ###*metabarcoding*
 ]]
 
+---
+
+
+name: Template
+layout: true
+class: inverse, center, middle
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)), url(images/OA_fondo.JPG)
+background-size: cover
+
+---
+name: Gaining popularity
+.center[ ## eDNA is gaining popularity]
+
+<img src="images/eDNA_popularity.jpg" alt="pop" width="700" />
+
+---
+
+name: Types of publications I
+
+     ### It works!                    
+
+
+
+<img src="images/It_works.1.png" alt="pop" width="600" />
+</br>
+<img src="images/It_works.2.png" alt="pop" width="600" />
+
+---
+
+name: Types of publications II
+ 
+### Different views
+
+
+<img src="images/Different_things_1.png" alt="pop" width="600" />
+</br>
+<img src="images/Different_things_2.png" alt="pop" width="600" />
+
+---
+
+name: Types of publications III
+
+### Ecological research
+
+
+
+<img src="images/Ecological_inference_1.png" alt="pop" width="600" />
+</br>
+<img src="images/Ecological_inference_2.png" alt="pop" width="600" />
+
 
 ---
 
@@ -203,7 +253,8 @@ name: How to sample
 class: nord-dark, center, middle
 layout: false
 
-## .nord4[How to sample eDNA?]
+
+## .nord4[*How to sample eDNA?*]
 
 
 ---
@@ -212,7 +263,7 @@ name: Soil
 class: nord-light
 layout: true
 
-## .nord1[Sampling methods]
+### .nord1[Sampling methods]
 
 ---
 
@@ -293,60 +344,14 @@ knitr::include_graphics("images/air.eDNA.png")
 ```
 
 ]
----
-name: Template
-layout: true
-class: inverse, center, middle
-background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)), url(images/OA_fondo.JPG)
-background-size: cover
-
----
-name: Gaining popularity
-.center[ ## eDNA is gaining popularity]
-
-<img src="images/eDNA_popularity.jpg" alt="pop" width="700" />
-
----
-
-name: Types of publications I
-
-     ### It works!                    
-
-
-
-<img src="images/It_works.1.png" alt="pop" width="600" />
-</br>
-<img src="images/It_works.2.png" alt="pop" width="600" />
-
----
-
-name: Types of publications II
- 
-### Different views
-
-
-<img src="images/Different_things_1.png" alt="pop" width="600" />
-</br>
-<img src="images/Different_things_2.png" alt="pop" width="600" />
-
----
-
-name: Types of publications III
-
-### Ecological research
-
-
-
-<img src="images/Ecological_inference_1.png" alt="pop" width="600" />
-</br>
-<img src="images/Ecological_inference_2.png" alt="pop" width="600" />
 
 ---
 name: eDNA_ecology
-class: inverse, center, middle
+class: nord-dark, center, middle
 layout: false
 
-# .nord4[What affects eDNA presence in your sample?]
+
+## .nord4[*What affects eDNA presence in your sample?*]
 
 ---
 name: Template again
@@ -495,11 +500,11 @@ leaflet(data = read_csv(here("Data","site.info.csv"))) %>%
 .pull-right[
 .content-box-yellow[
 .nord9[
-- Seasonal and temporal scale
+- *Seasonal and temporal scale*
 
-- Add Biological replication
+- *Add Biological replication*
 
-- Add technical replication
+- *Add technical replication*
 ]]
 .center[
 <img src="images/ridges.env.vars.png" alt="PCRbias" />
@@ -572,7 +577,8 @@ read_csv(here("Data", "ASV_table_all_together.csv")) %>%
     arrange(sample) %>% 
     pivot_wider(id_cols = label, names_from = sample, values_from = nReads, values_fill = list (nReads = 0), values_fn = list(nReads= sum)) %>% 
     rename (Taxa = label) %>%
-    select(1:7) %>% 
+    select(1:7) -> ugly.table
+  ugly.table %>% 
     kable() %>% 
     kable_styling(full_width = T) %>% 
        column_spec(1, italic  = T) %>% 
@@ -582,6 +588,17 @@ read_csv(here("Data", "ASV_table_all_together.csv")) %>%
 nice.table
 ```
 ]
+---
+
+
+name: template_OA
+class: nord-light, typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)), url(images/OA_fondo.JPG)
+background-size: cover
+layout: true
+
+### .center.nord9.bold[What does it tell us about the world?]
+
 ---
 
 
@@ -639,21 +656,181 @@ knitr::include_graphics("images/PCR_div.png")
 
 
 ]
+---
+.left-column[
+
+
+ ### .nord4.bold[Differential Primer Affinity]
+
+ ### .nord4.bold[Strong effect on] .nord13.bold[number of reads]
+]
 
 ---
 
-class: nord-dark
+
+
+ 
+```{r,echo=F, fig.align='right'}
+knitr::include_graphics("images/Illustrate_process.png")
+
+```
 
 
 
 
 
-## .center[ We can get .bold[quantitative] information from metabarcoding]
 
+---
+
+class: nord-light
+
+
+
+
+
+### .center[ Can we get .bold[quantitative] information from metabarcoding by transforming the data?]
+
+--
+.huge[
+\begin{align}
+ Prop A_ij = \dfrac{A_ij}{\sum{A_j}}
+\end{align}
+]
+
+
+.content-box-white[
+```{r, echo = F, warning=FALSE ,message=FALSE, out.height='70%', out.width='70%'}
+read_csv(here("Data", "ASV_table_all_together.csv")) %>%  
+  left_join(read_csv(here("Data", "Annotated.hashes.csv"))) %>% 
+   unite(family, genus, species, sep = "|", col = "taxa", remove = F) %>%
+    mutate(label = case_when(is.na(species) ~  paste0(genus, " sp."),
+                                                   TRUE            ~ species)) %>% 
+  
+    filter(Miseq_run ==1,  taxa %in% keepers) %>% 
+    mutate(sample = fct_relabel(sample, convert.names)) %>% 
+    arrange(sample) %>% 
+    select(sample, Taxa = label, nReads) %>% 
+  group_by(sample) %>% # Filter samples with only one species
+  add_tally(name = "rich") %>% 
+  filter (rich >1) %>% 
+  select(-rich) %>% 
+  mutate(tot = sum(nReads)) %>% 
+  mutate(nReads = round(nReads / tot, 3))  %>% 
+  select(-tot) %>% 
+  pivot_wider(id_cols = Taxa, names_from = sample, values_from = nReads, values_fill = list (nReads = 0), values_fn = list(nReads= sum)) %>% 
+  select(1:7) %>% 
+  kable() %>% 
+    kable_styling(full_width = T) %>% 
+       column_spec(1, italic  = T) %>% 
+       column_spec(2:6, width = '1in')
+  
+```
+
+]
+---
+.huge[
+\begin{align}
+ Prop A_ij = \dfrac{A_ij}{\sum{A_j}}
+\end{align}
+
+\begin{align}
+ eDNAindex A_ij = \dfrac{PropA_ij}{\max{Prop A_i}}
+\end{align}
+]
+
+
+.content-box-blue[
+```{r, echo = F, warning=FALSE ,message=FALSE, out.height='70%', out.width='70%'}
+read_csv(here("Data", "ASV_table_all_together.csv")) %>%  
+  left_join(read_csv(here("Data", "Annotated.hashes.csv"))) %>% 
+   unite(family, genus, species, sep = "|", col = "taxa", remove = F) %>%
+    mutate(label = case_when(is.na(species) ~  paste0(genus, " sp."),
+                                                   TRUE            ~ species)) %>% 
+  
+    filter(Miseq_run ==1,  taxa %in% keepers) %>% 
+    mutate(sample = fct_relabel(sample, convert.names)) %>% 
+    arrange(sample) %>% 
+    select(sample, Taxa = label, nReads) %>% 
+  group_by(sample) %>% # Filter samples with only one species
+  add_tally(name = "rich") %>% 
+  filter (rich >1) %>% 
+  select(-rich) %>% 
+  mutate(tot = sum(nReads)) %>% 
+  mutate(nReads = round(nReads / tot, 3))  %>% 
+  group_by(Taxa) %>% 
+  mutate(nReads = round(nReads / max(nReads), 3)) %>% 
+  select(-tot) %>% 
+  pivot_wider(id_cols = Taxa, names_from = sample, values_from = nReads, values_fill = list (nReads = 0), values_fn = list(nReads= sum)) %>% 
+  select(1:7) %>% 
+  kable() %>% 
+    kable_styling(full_width = T) %>% 
+       column_spec(1, italic  = T) %>% 
+       column_spec(2:6, width = '1in')
+  # column_spec(2, width = '1in', background = "yellow") %>% 
+  # row_spec(1,background = "yellow") 
+```
+
+]
+
+---
 
 .center[
 <img src="images/Understanding1.png" alt="PCRbias" width="540" />
 ]
+
+---
+class: nord-dark
+
+</br>
+.content-box-blue[
+.nord1[
+## But applying the same threshold across the board
+
+## does not solve the problem
+]]
+
+--
+
+</br>
+
+.content-box-blue[
+.nord1[
+## We need to estimate the Amplification efficiency of each taxa
+]]
+---
+
+### Various approaches
+
+* .bold[Mock community]
+
+* .bold[Variable cycle PCR]
+
+
+<img src="images/Illustrate_process_variable_pcr.png" alt="PCRbias"  />
+
+
+---
+.pull-left[
+
+*Sets of estimations* 
+
+and
+
+*Confidence intervals*
+]
+
+.pull-right[
+
+<img src="images/Amplification_efficiency.png" alt="PCRbias"  />
+
+]
+
+---
+```{r,echo=F, fig.align='right'}
+knitr::include_graphics("images/SimulationFigure_Main_3varyPCRsamples.jpeg")
+```
+
+
 
 ---
 
