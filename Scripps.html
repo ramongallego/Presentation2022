@@ -9,7 +9,7 @@
     <script src="libs/kePrint/kePrint.js"></script>
     <link href="libs/lightable/lightable.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
-    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
     <link href="libs/leaflet/leaflet.css" rel="stylesheet" />
     <script src="libs/leaflet/leaflet.js"></script>
     <link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
@@ -17,13 +17,6 @@
     <script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
     <link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
     <script src="libs/leaflet-binding/leaflet.js"></script>
-    <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="libs/datatables-binding/datatables.js"></script>
-    <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
-    <link href="libs/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
-    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
     <link rel="stylesheet" href="css/sfah.css" type="text/css" />
     <link rel="stylesheet" href="css/fonts.css" type="text/css" />
@@ -118,7 +111,95 @@ class: center, middle
 .huge[ *DNA that can be extracted from environmental samples (such as soil, water or air), without first isolating any target organisms*, Taberlet et al. 2012]
 
 
+---
 
+name: How to sample
+class: nord-dark, center, middle
+layout: false
+
+
+## .nord4[**How to sample eDNA?**]
+
+
+---
+
+name: Soil
+class: nord-light
+layout: true
+
+### .nord1[Sampling methods]
+
+---
+
+name: Soil
+
+.center[ # Soil]
+
+.content-box-purple[
+&lt;img src="images/Tiara_TNC.jpg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+.center[ # Soil]
+
+.content-box-purple[
+&lt;img src="images/Tiara_UCLA.jpg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+name: Freshwater
+
+.center[ # Rivers]
+
+.content-box-purple[
+&lt;img src="images/Freshwater.jpeg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+name: Freshwater
+
+.center[ # Coastal waters]
+
+.content-box-purple[
+&lt;img src="images/eDNA_16x9.jpg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;&lt;img src="images/procB2.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+name: Freshwater
+
+.center[ ## Open Ocean]
+
+.content-box-purple[
+&lt;img src="images/CTD.jpg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;&lt;img src="images/ProcB_hake.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+name: Freshwater
+
+.center[ # Air]
+
+.content-box-purple[
+&lt;img src="images/eDNA_air.jpg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;&lt;img src="images/air.eDNA.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
+
+]
+---
+
+name: How to sample
+class: nord-dark, center, middle
+layout: false
+
+
+## .nord4[**What information can we get from eDNA?**]
 
 
 ---
@@ -277,7 +358,77 @@ class: nord-dark
 ]]
 
 ---
+class: middle, center
 
+.content-box-white[
+&lt;img src="images/aligned.png" alt="pipeline" width="640" /&gt;
+]
+
+---
+class: middle, center
+
+.content-box-white[
+&lt;img src="images/primerloc.png" alt="pipeline" width="640" /&gt;
+]
+---
+
+
+class: middle, center
+
+.pull-left[
+.bold[ribosomal RNA]
+ 
+ 1. bridges are conserved
+ 2. Loops mutate freely
+ 3. Eg. 16SrRNA, 18SrRNA 
+ 
+&lt;img src="images/thermus_16s_2ndry.jpeg" alt="16S" width="300" /&gt;
+
+]
+.pull-right[
+.bold[Transmembrane Protein Genes]
+
+   1. AA must be hygrophob
+   2. Third base on each codon can mutate 
+   3. Better to use mitochondrial
+   4. Examples: COI, Cytb
+
+&lt;img src="images/COI.png" alt="16S"  /&gt;
+
+]
+---
+class: middle, center
+
+.content-box-white[
+&lt;img src="images/amplified.png" alt="pipeline" width="640" /&gt;
+]
+---
+
+&lt;/br&gt;
+
+
+.huge[##**Sequencing by Synthesis**]
+
+&lt;/br&gt;
+
+ .center[
+
+&lt;img src="images/Seqbysyn2.png" width="75%" /&gt;
+]
+
+---
+
+
+name: What for
+class: nord-dark, center, middle
+layout: false
+
+
+## .nord4[**eDNA and marine ecology**]
+
+
+
+---
 
 name: Template
 layout: true
@@ -327,87 +478,7 @@ name: Types of publications III
 &lt;img src="images/Ecological_inference_2.png" alt="pop" width="600" /&gt;
 
 
----
 
-name: How to sample
-class: nord-dark, center, middle
-layout: false
-
-
-## .nord4[*How to sample eDNA?*]
-
-
----
-
-name: Soil
-class: nord-light
-layout: true
-
-### .nord1[Sampling methods]
-
----
-
-name: Soil
-
-.center[ # Soil]
-
-.content-box-purple[
-&lt;img src="images/Tiara_TNC.jpg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
-
-]
-
----
-
-.center[ # Soil]
-
-.content-box-purple[
-&lt;img src="images/Tiara_UCLA.jpg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
-
-]
-
----
-
-name: Freshwater
-
-.center[ # Rivers]
-
-.content-box-purple[
-&lt;img src="images/Freshwater.jpeg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
-
-]
-
----
-
-name: Freshwater
-
-.center[ # Coastal waters]
-
-.content-box-purple[
-&lt;img src="images/eDNA_16x9.jpg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;&lt;img src="images/procB2.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
-
-]
-
----
-
-name: Freshwater
-
-.center[ ## Open Ocean]
-
-.content-box-purple[
-&lt;img src="images/CTD.jpg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;&lt;img src="images/ProcB_hake.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
-
-]
-
----
-
-name: Freshwater
-
-.center[ # Air]
-
-.content-box-purple[
-&lt;img src="images/eDNA_air.jpg" width="80%" height="80%" style="display: block; margin: auto;" /&gt;&lt;img src="images/air.eDNA.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
-
-]
 
 ---
 name: eDNA_ecology
@@ -415,7 +486,7 @@ class: nord-dark, center, middle
 layout: false
 
 
-## .nord4[*What affects eDNA presence in your sample?*]
+## .nord4[**What affects eDNA presence in your sample?**]
 
 ---
 name: Template again
@@ -445,6 +516,10 @@ name: ecology3
 &lt;img src="images/eDNA_ecology_3.png" alt="pop" width="700" /&gt;
 
 .footnote[.bold[Andruszkiewicz Alan et al., 2021]]
+
+
+
+
 
 ---
 name: Intro to OA_eDNA
@@ -542,8 +617,8 @@ name: Research plan
 
 .pull-left[
 
-<div id="htmlwidget-b70105ef5326a2d454d6" style="width:90%;height:504px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b70105ef5326a2d454d6">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[48.449827,48.545085,48.5145,47.462959,47.35981,47.856772,47.608961,47.378431],[-122.963231,-123.012028,-123.151,-123.103774,-123.155597,-122.607721,-122.984734,-122.97483],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["CP","FH","LK","LL","PO","SA","TR","TW"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[1,1],"textsize":"20px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[47.5,-122.5],7,[]],"limits":{"lat":[47.35981,48.545085],"lng":[-123.155597,-122.607721]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-d4e87aed46a8f73f2cc4" style="width:90%;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d4e87aed46a8f73f2cc4">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[48.449827,48.545085,48.5145,47.462959,47.35981,47.856772,47.608961,47.378431],[-122.963231,-123.012028,-123.151,-123.103774,-123.155597,-122.607721,-122.984734,-122.97483],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["CP","FH","LK","LL","PO","SA","TR","TW"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[1,1],"textsize":"20px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[47.5,-122.5],7,[]],"limits":{"lat":[47.35981,48.545085],"lng":[-123.155597,-122.607721]}},"evals":[],"jsHooks":[]}</script>
 ]
 
 --
@@ -859,6 +934,19 @@ name: PCR paper front
 How to interpret the number of occurrences of a sequence in a sample?  
 
 ---
+
+class: nord-dark, middle, center
+name: PCR paper2 front
+
+
+
+&lt;img src="images/Towards_quant_biorxiv.png" alt="PCRbias" width="720" /&gt;
+
+???
+
+How to interpret the number of occurrences of a sequence in a sample?  
+
+---
 class: nord-dark, typo, typo-selection
 
 
@@ -880,15 +968,11 @@ class: nord-dark, typo, typo-selection
 
 ]
 ---
-.left-column[
 
 
- ### .nord4.bold[Differential Primer Affinity]
 
- ### .nord4.bold[Strong effect on] .nord13.bold[number of reads]
-]
+ ### .nord4.bold[It affects ] .nord13.bold[proportions of reads]
 
----
 
 
 
@@ -908,7 +992,7 @@ class: nord-light
 
 
 
-### .center[ Can we get .bold[quantitative] information from metabarcoding by transforming the data?]
+### .center[ Can we get .nord13.bold[quantitative] information from metabarcoding by transforming the data?]
 
 --
 .huge[
@@ -1027,6 +1111,7 @@ class: nord-light
 
 ]
 ---
+
 .huge[
 `\begin{align}
  Prop A_ij = \dfrac{A_ij}{\sum{A_j}}
@@ -1159,10 +1244,12 @@ class: nord-dark
 &lt;/br&gt;
 .content-box-blue[
 .nord1[
-## But applying the same threshold across the board
+.center[
+### But applying the same threshold across 
 
-## does not solve the problem
-]]
+
+### the board does not solve the problem
+]]]
 
 --
 
@@ -1170,8 +1257,30 @@ class: nord-dark
 
 .content-box-blue[
 .nord1[
-## We need to estimate the Amplification efficiency of each taxa
-]]
+.center[
+### We need to estimate the Amplification efficiency of each taxa
+]]]
+
+--
+
+&lt;/br&gt;
+
+.content-box-blue[
+.nord1[
+.center[
+.huge[
+`$$A_i = c_i(1 + a_i)^{N_{PCR}}$$`
+
+
+]]]]
+
+---
+### Various approaches
+
+* .bold[Mock community]
+
+&lt;img src="images/Mock_community_solution.png" alt="PCRbias"  /&gt;
+
 ---
 
 ### Various approaches
@@ -1201,9 +1310,31 @@ and
 ]
 
 ---
-&lt;img src="images/SimulationFigure_Main_3varyPCRsamples.jpeg" style="display: block; margin: auto 0 auto auto;" /&gt;
+&lt;img src="images/F6.large.jpg" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+---
+&lt;/br&gt;
+
+### .nord4[A full model for observed counts for all .nord13.bold[*I*] taxa is]
 
 
+.content-box-blue[
+.nord1[
+`$$Y  \sim Multinomial (\mu,N)$$`
+
+ 
+`$$\mu_i = \dfrac{e^{\nu_i}}{\sum_{i=1}^I e^\nu_i}$$` 
+
+
+ 
+
+  `$$\nu_i = \beta_i + N_{PCR} \alpha_i + \epsilon_i$$` 
+
+
+ 
+ 
+  `$$\epsilon_i \sim N(0,\tau_i)$$`
+]]
 
 ---
 
@@ -1483,81 +1614,84 @@ Taking advantage from recently published models for the inner sea
 &lt;img src="images/Dinophyceaerastertitle.png" alt="PCRbias" width="850"&gt;
 
 ---
-name: Intro to OA_eDNA
-class: inverse, center, middle
-layout: false
 
-# .nord4[Oceanography and its effects on eDNA ]
+&lt;!-- --- --&gt;
+&lt;!-- name: Intro to OA_eDNA --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+&lt;!-- layout: false --&gt;
 
+&lt;!-- # .nord4[Oceanography and its effects on eDNA ] --&gt;
 
----
 
-name: template_Hake
-class: nord-light, typo-selection
-background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)), url(images/OA_fondo.JPG)
-background-size: cover
-layout: true
+&lt;!-- --- --&gt;
 
-### .center.nord9.bold[Upwelling and eDNA]
+&lt;!-- name: template_Hake --&gt;
+&lt;!-- class: nord-light, typo-selection --&gt;
+&lt;!-- background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)), url(images/OA_fondo.JPG) --&gt;
+&lt;!-- background-size: cover --&gt;
+&lt;!-- layout: true --&gt;
 
+&lt;!-- ### .center.nord9.bold[Upwelling and eDNA] --&gt;
 
----
 
+&lt;!-- --- --&gt;
 
 
-name: OA_eDNA_template
-class: nord-light
 
+&lt;!-- name: OA_eDNA_template --&gt;
+&lt;!-- class: nord-light --&gt;
 
-### .fancy[ *Coastal Upwelling*]
 
-.left-column[
-.content-box-yellow[
-- Prevailing winds displace surface waters
+&lt;!-- ### .fancy[ *Coastal Upwelling*] --&gt;
 
-- Deep water comes to surface
-- Brings up nutrient rich, low oxygen water]
-]
+&lt;!-- .left-column[ --&gt;
+&lt;!-- .content-box-yellow[ --&gt;
+&lt;!-- - Prevailing winds displace surface waters --&gt;
 
-.right-column[
-&lt;img src="images/coast_upwelling.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;!-- - Deep water comes to surface --&gt;
+&lt;!-- - Brings up nutrient rich, low oxygen water] --&gt;
+&lt;!-- ] --&gt;
 
-]
----
-layout: false
-name: Hake survey 
-class: nord-dark, center, middle
+&lt;!-- .right-column[ --&gt;
+&lt;!-- ```{r,echo=F, out.width='80%', fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/coast_upwelling.png") --&gt;
+&lt;!-- ``` --&gt;
 
-# *Hake survey*
+&lt;!-- ] --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- layout: false --&gt;
+&lt;!-- name: Hake survey  --&gt;
+&lt;!-- class: nord-dark, center, middle --&gt;
 
---
+&lt;!-- # *Hake survey* --&gt;
 
-### Integrated ecosystem acoustic and trawl survey
+&lt;!-- -- --&gt;
 
+&lt;!-- ### Integrated ecosystem acoustic and trawl survey --&gt;
 
----
-name: Hake
-class: nord-light
-background-image: url(images/900x600-pacific-whiting-noaa.jpeg)
-background-position: right
-background-size: 50% 50%
 
+&lt;!-- --- --&gt;
+&lt;!-- name: Hake --&gt;
+&lt;!-- class: nord-light --&gt;
+&lt;!-- background-image: url(images/900x600-pacific-whiting-noaa.jpeg) --&gt;
+&lt;!-- background-position: right --&gt;
+&lt;!-- background-size: 50% 50% --&gt;
 
-# .huge.center[*Hake*]
- .center[_Merluccius productus_]
-&lt;/br&gt;
-.pull-left[ 
 
- - *semi-pelagic fish*
+&lt;!-- # .huge.center[*Hake*] --&gt;
+&lt;!--  .center[_Merluccius productus_] --&gt;
+&lt;!-- &lt;/br&gt; --&gt;
+&lt;!-- .pull-left[  --&gt;
 
-  - bottom during the day, up the water column during the day
+&lt;!--  - *semi-pelagic fish* --&gt;
 
-- *Largest fishery on the West Coast by volume*
+&lt;!--   - bottom during the day, up the water column during the day --&gt;
 
-  -  440,942 t in 2017
+&lt;!-- - *Largest fishery on the West Coast by volume* --&gt;
 
-]
+&lt;!--   -  440,942 t in 2017 --&gt;
 
+&lt;!-- ] --&gt;
 
 
 
@@ -1566,574 +1700,679 @@ background-size: 50% 50%
 
 
 
----
 
-name: Hake survey 1
-class: nord-light
-background-image: url(images/station.plot.png)
-background-position: 0% 0%
-background-size: 30% 100%
+&lt;!-- --- --&gt;
 
-# .right[*Hake survey*]
+&lt;!-- name: Hake survey 1 --&gt;
+&lt;!-- class: nord-light --&gt;
+&lt;!-- background-image: url(images/station.plot.png) --&gt;
+&lt;!-- background-position: 0% 0% --&gt;
+&lt;!-- background-size: 30% 100% --&gt;
 
+&lt;!-- # .right[*Hake survey*] --&gt;
 
 
-.pull-right[
-.center-right[
-- Run every two years
 
-- Covers onshore/offshore transects
+&lt;!-- .pull-right[ --&gt;
+&lt;!-- .center-right[ --&gt;
+&lt;!-- - Run every two years --&gt;
 
-- Estimates Hake abundance, age classes, maturity
+&lt;!-- - Covers onshore/offshore transects --&gt;
 
-- Uses acoustic signal  + trawl
+&lt;!-- - Estimates Hake abundance, age classes, maturity --&gt;
 
-- In 2019 started an eDNA program
+&lt;!-- - Uses acoustic signal  + trawl --&gt;
 
-- Sampling spans ~ 2 months
-]]
----
-name: Acoustivs
-class: nord-light
-background-image: url(images/station.plot.png)
-background-position: 0% 0%
-background-size: 30% 100%
+&lt;!-- - In 2019 started an eDNA program --&gt;
 
-## .right[*Acoustics Component*]
+&lt;!-- - Sampling spans ~ 2 months --&gt;
+&lt;!-- ]] --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- name: Acoustivs --&gt;
+&lt;!-- class: nord-light --&gt;
+&lt;!-- background-image: url(images/station.plot.png) --&gt;
+&lt;!-- background-position: 0% 0% --&gt;
+&lt;!-- background-size: 30% 100% --&gt;
 
+&lt;!-- ## .right[*Acoustics Component*] --&gt;
 
-.pull-right[
 
-- Distinct backscatter pattern
+&lt;!-- .pull-right[ --&gt;
 
-- Fish ID corroborated with trawls
+&lt;!-- - Distinct backscatter pattern --&gt;
 
-- Stock biomass
+&lt;!-- - Fish ID corroborated with trawls --&gt;
 
-- Age-class &amp; maturity information
+&lt;!-- - Stock biomass --&gt;
 
-&lt;img src="images/Hake_scatter.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;!-- - Age-class &amp; maturity information --&gt;
 
+&lt;!-- ```{r,echo=F,  out.width = '100%',fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/Hake_scatter.jpg") --&gt;
+&lt;!-- ``` --&gt;
 
-]
----
-name: eDNA sampling
-class: nord-light
-background-image: url(images/station.plot.png)
-background-position: 0% 0%
-background-size: 25% 100%
 
-# .right[*eDNA Component*]
+&lt;!-- ] --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- name: eDNA sampling --&gt;
+&lt;!-- class: nord-light --&gt;
+&lt;!-- background-image: url(images/station.plot.png) --&gt;
+&lt;!-- background-position: 0% 0% --&gt;
+&lt;!-- background-size: 25% 100% --&gt;
 
-.leftmost-column[]
-.center-column[
+&lt;!-- # .right[*eDNA Component*] --&gt;
 
-- 1930 eDNA samples 
+&lt;!-- .leftmost-column[] --&gt;
+&lt;!-- .center-column[ --&gt;
 
-- From 36 longitudinal transects
+&lt;!-- - 1930 eDNA samples  --&gt;
 
-- ~ 6 stops per transect
+&lt;!-- - From 36 longitudinal transects --&gt;
 
-- ~ 5 depths per stop
-]
+&lt;!-- - ~ 6 stops per transect --&gt;
 
-.rightmost-column[
-- 2 Niskins bottles per depth (2.5L per Niskin = 1 eDNA sample)
+&lt;!-- - ~ 5 depths per stop --&gt;
+&lt;!-- ] --&gt;
 
-- \&gt;350 samples from Flow-through system
+&lt;!-- .rightmost-column[ --&gt;
+&lt;!-- - 2 Niskins bottles per depth (2.5L per Niskin = 1 eDNA sample) --&gt;
 
-- All working from sunset to sunrise
+&lt;!-- - \&gt;350 samples from Flow-through system --&gt;
 
-]
-&lt;img src="images/filter_crew2.png" width="70%" style="display: block; margin: auto 0 auto auto;" /&gt;
+&lt;!-- - All working from sunset to sunrise --&gt;
 
----
-name: paper out
+&lt;!-- ] --&gt;
+&lt;!-- ```{r,echo=F,  out.width = '70%',fig.align='right'} --&gt;
+&lt;!-- knitr::include_graphics("images/filter_crew2.png") --&gt;
+&lt;!-- ``` --&gt;
 
-class:nord-light
+&lt;!-- --- --&gt;
+&lt;!-- name: paper out --&gt;
 
+&lt;!-- class:nord-light --&gt;
 
-## *eDNA can be used for stock assessment*
 
-&lt;img src="images/ProcB_hake.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;!-- ## *eDNA can be used for stock assessment* --&gt;
 
+&lt;!-- ```{r,echo=F,  out.width = '100%',fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/ProcB_hake.png") --&gt;
+&lt;!-- ``` --&gt;
 
----
-name: qPCR results1
-class: nord-light
 
+&lt;!-- --- --&gt;
+&lt;!-- name: qPCR results1 --&gt;
+&lt;!-- class: nord-light --&gt;
 
 
-## *eDNA variance is similar to that of Acoustics*
 
-&lt;img src="images/ProcB_fig2c.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;!-- ## *eDNA variance is similar to that of Acoustics* --&gt;
 
+&lt;!-- ```{r,echo=F,  out.width = '70%',fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/ProcB_fig2c.png") --&gt;
+&lt;!-- ``` --&gt;
 
----
-name: qPCR results2
-class: nord-light
 
+&lt;!-- --- --&gt;
+&lt;!-- name: qPCR results2 --&gt;
+&lt;!-- class: nord-light --&gt;
 
 
-## *eDNA offers comparable results to those of Acoustics*
 
-&lt;img src="images/ProcB_fig3a.png" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;!-- ## *eDNA offers comparable results to those of Acoustics* --&gt;
 
+&lt;!-- ```{r,echo=F,  out.width = '90%',fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/ProcB_fig3a.png") --&gt;
+&lt;!-- ``` --&gt;
 
----
-name: eDNA sampling
-class: nord-light
-background-image: url(images/depth.profile.png)
-background-position: 50% 80%
-background-size: contain
-## *Where do we sample?*
 
+&lt;!-- --- --&gt;
+&lt;!-- name: eDNA sampling --&gt;
+&lt;!-- class: nord-light --&gt;
+&lt;!-- background-image: url(images/depth.profile.png) --&gt;
+&lt;!-- background-position: 50% 80% --&gt;
+&lt;!-- background-size: contain --&gt;
+&lt;!-- ## *Where do we sample?* --&gt;
 
-- Near the surface
-- Mid water 
-- Up to 500m depth
 
-- So in some stations surface-midwater-near bottom
-- in others quite far from there
+&lt;!-- - Near the surface --&gt;
+&lt;!-- - Mid water  --&gt;
+&lt;!-- - Up to 500m depth --&gt;
 
+&lt;!-- - So in some stations surface-midwater-near bottom --&gt;
+&lt;!-- - in others quite far from there --&gt;
 
 
 
----
-name: Where is the eDNA coming
-class: nord-dark, center, middle
 
+&lt;!-- --- --&gt;
+&lt;!-- name: Where is the eDNA coming --&gt;
+&lt;!-- class: nord-dark, center, middle --&gt;
 
-# .huge[*But where is this eDNA coming from?*]
 
+&lt;!-- # .huge[*But where is this eDNA coming from?*] --&gt;
 
----
-class: inverse, middle, center
-class: nord-light
 
-## Where is eDNA coming from
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, middle, center --&gt;
+&lt;!-- class: nord-light --&gt;
 
- Two interconnected questions:
-.pull-left[
-- .huge[*Does upwelling bring eDNA from deeper water?*]
+&lt;!-- ## Where is eDNA coming from --&gt;
 
-- .huge[*Does an established Thermocline function as a barrier for eDNA flow?* ]
-]
+&lt;!--  Two interconnected questions: --&gt;
+&lt;!-- .pull-left[ --&gt;
+&lt;!-- - .huge[*Does upwelling bring eDNA from deeper water?*] --&gt;
 
-.pull-right[
-&lt;img src="images/coast_upwelling.png" width="80%" style="display: block; margin: auto;" /&gt;
-]
+&lt;!-- - .huge[*Does an established Thermocline function as a barrier for eDNA flow?* ] --&gt;
+&lt;!-- ] --&gt;
 
+&lt;!-- .pull-right[ --&gt;
+&lt;!-- ```{r,echo=F,  out.width = '80%',fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/coast_upwelling.png") --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
 
 
 
 
-&lt;img src="images/CTD.plot.png" width="90%" style="display: block; margin: auto;" /&gt;
 
----
+&lt;!-- ```{r,echo=F,  out.width = '90%',fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/CTD.plot.png") --&gt;
+&lt;!-- ``` --&gt;
 
-name: Experimental design
-class: nord-dark, center, middle
+&lt;!-- --- --&gt;
 
-# .huge[*Experimental design*]
+&lt;!-- name: Experimental design --&gt;
+&lt;!-- class: nord-dark, center, middle --&gt;
 
----
-name: Experimental design 1
-class: nord-light
-layout: true
+&lt;!-- # .huge[*Experimental design*] --&gt;
 
-# Experimental design
+&lt;!-- --- --&gt;
+&lt;!-- name: Experimental design 1 --&gt;
+&lt;!-- class: nord-light --&gt;
+&lt;!-- layout: true --&gt;
 
----
-name: Exp design2
+&lt;!-- # Experimental design --&gt;
 
+&lt;!-- --- --&gt;
+&lt;!-- name: Exp design2 --&gt;
 
-name: Exp design3
 
-- *Choosing Transects with / without established Thermocline*
+&lt;!-- name: Exp design3 --&gt;
 
+&lt;!-- - *Choosing Transects with / without established Thermocline* --&gt;
 
-&lt;img src="images/plots.for.choosing.png" width="65%" height="75%" style="display: block; margin: auto;" /&gt;
 
----
+&lt;!-- ```{r,echo=F,  out.width = '65%', out.height="75%" , fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/plots.for.choosing.png") --&gt;
+&lt;!-- ``` --&gt;
 
-name: Exp design4
+&lt;!-- --- --&gt;
 
-- *Choosing Transects with / without established Thermocline*
+&lt;!-- name: Exp design4 --&gt;
 
+&lt;!-- - *Choosing Transects with / without established Thermocline* --&gt;
 
-&lt;img src="images/choosen2.png" width="60%" height="50%" style="display: block; margin: auto;" /&gt;
----
 
-- Choosing Transects with / without established Thermocline
+&lt;!-- ```{r,echo=F,  out.width = '60%', out.height="50%" , fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/choosen2.png") --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- --- --&gt;
 
-- *Metabarcoding of eDNA targetting Fishes with 16S*
-&lt;/br&gt;
-.push-right[
-&lt;/br&gt;
-- Potentitally amplifying cartilaginous and bony fishes
-- Target fragment ~ 350 bp 
-- Sequencing on an Illumina MiSeq
+&lt;!-- - Choosing Transects with / without established Thermocline --&gt;
 
-]
+&lt;!-- - *Metabarcoding of eDNA targetting Fishes with 16S* --&gt;
+&lt;!-- &lt;/br&gt; --&gt;
+&lt;!-- .push-right[ --&gt;
+&lt;!-- &lt;/br&gt; --&gt;
+&lt;!-- - Potentitally amplifying cartilaginous and bony fishes --&gt;
+&lt;!-- - Target fragment ~ 350 bp  --&gt;
+&lt;!-- - Sequencing on an Illumina MiSeq --&gt;
 
----
+&lt;!-- ] --&gt;
 
-name: Exp design4.5
+&lt;!-- --- --&gt;
 
-- Choosing Transects with / without established Thermocline
-- Metabarcoding of eDNA targetting Fishes with 16S
-- *Decontamination, denoising and taxonomical assignment*
-    - cutadapt -&gt; DADA2 -&gt; Decontamination script -&gt; insect 
+&lt;!-- name: Exp design4.5 --&gt;
 
+&lt;!-- - Choosing Transects with / without established Thermocline --&gt;
+&lt;!-- - Metabarcoding of eDNA targetting Fishes with 16S --&gt;
+&lt;!-- - *Decontamination, denoising and taxonomical assignment* --&gt;
+&lt;!--     - cutadapt -&gt; DADA2 -&gt; Decontamination script -&gt; insect  --&gt;
 
----
-name: Exp design5
 
-- Choosing Transects with / without established Thermocline
-- Metabarcoding of eDNA targetting Fishes with 16S
-- Decontamination, denoising and taxonomical assignment
-- *Statistical framework*
- 
- &lt;/br&gt;
+&lt;!-- --- --&gt;
+&lt;!-- name: Exp design5 --&gt;
 
-   - _Community analysis_:
+&lt;!-- - Choosing Transects with / without established Thermocline --&gt;
+&lt;!-- - Metabarcoding of eDNA targetting Fishes with 16S --&gt;
+&lt;!-- - Decontamination, denoising and taxonomical assignment --&gt;
+&lt;!-- - *Statistical framework* --&gt;
 
-`$$\bar{Comm}\sim Transect + Depth + Upwelling$$`
---
+&lt;!--  &lt;/br&gt; --&gt;
 
-   - _Individual species analysis_:
- 
-`$$\bar{X}_i \sim Transect + Depth + Upwelling$$` 
+&lt;!--    - _Community analysis_: --&gt;
 
+&lt;!-- `$$\bar{Comm}\sim Transect + Depth + Upwelling$$` --&gt;
+&lt;!-- -- --&gt;
 
+&lt;!--    - _Individual species analysis_: --&gt;
 
----
+&lt;!-- `$$\bar{X}_i \sim Transect + Depth + Upwelling$$`  --&gt;
 
-name: Results
-layout: false
-class: nord-dark, middle
 
-# .huge[*Results*]
 
----
+&lt;!-- --- --&gt;
 
-name: Results
-layout: true
-class: nord-light
+&lt;!-- name: Results --&gt;
+&lt;!-- layout: false --&gt;
+&lt;!-- class: nord-dark, middle --&gt;
 
-# Results
+&lt;!-- # .huge[*Results*] --&gt;
 
----
-### The numbers
+&lt;!-- --- --&gt;
 
-- We sequenced 115 biological samples, 215 technical replicates
+&lt;!-- name: Results --&gt;
+&lt;!-- layout: true --&gt;
+&lt;!-- class: nord-light --&gt;
 
---
-- After QC and taxonomical assignment: 16M reads from 138 taxa
+&lt;!-- # Results --&gt;
 
---
-- Identified 4 species of sharks, 4 Rays, 1 Chimaera
-- 84 species of bony fishes, including 16 _Sebastes_ spp.
+&lt;!-- --- --&gt;
+&lt;!-- ### The numbers --&gt;
 
----
+&lt;!-- - We sequenced 115 biological samples, 215 technical replicates --&gt;
 
-<div id="htmlwidget-d9101b0e1ca7c7a8ee31" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d9101b0e1ca7c7a8ee31">{"x":{"filter":"none","vertical":false,"data":[["Agonidae","Agonidae","Alopiidae","Alopiidae","Anarhichadidae","Anarhichadidae","Anoplopomatidae","Anoplopomatidae","Atherinopsidae","Bathylagidae","Bathylagidae","Bathylagidae","Bathymasteridae","Belonidae","Belonidae","Carangidae","Carangidae","Carangidae","Carcharhinidae","Carcharhinidae","Centrolophidae","Centrolophidae","Chimaeridae","Chimaeridae","Clupeidae","Clupeidae","Clupeidae","Clupeidae","Clupeidae","Clupeidae","Cottidae","Cottidae","Cottidae","Cottidae","Cottidae","Cottidae","Cryptacanthodidae","Embiotocidae","Embiotocidae","Embiotocidae","Embiotocidae","Engraulidae","Engraulidae","Gadidae","Gadidae","Gonostomatidae","Hexagrammidae","Hexagrammidae","Jordaniidae","Liparidae","Liparidae","Liparidae","Liparidae","Liparidae","Merlucciidae","Merlucciidae","Merlucciidae","Microstomatidae","Microstomatidae","Molidae","Molidae","Myctophidae","Myctophidae","Myctophidae","Myctophidae","Myctophidae","Myctophidae","Osmeridae","Osmeridae","Osmeridae","Osmeridae","Osmeridae","Paralepididae","Paralepididae","Paralepididae","Paralepididae","Paralichthyidae","Paralichthyidae","Paralichthyidae","Paralichthyidae","Pholidae","Pholidae","Platytroctidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Pleuronectidae","Rajidae","Rajidae","Rajidae","Rajidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Salmonidae","Sciaenidae","Scombridae","Scombridae","Scombridae","Scyliorhinidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Sebastidae","Squalidae","Stichaeidae","Stomiidae","Zaniolepididae","Zaniolepididae","Zoarcidae","Zoarcidae","Zoarcidae","Zoarcidae"],["Chesnonia verrucosa","NA","Isurus oxyrinchus","Lamna ditropis","Anarrhichthys ocellatus","NA","Anoplopoma fimbria","NA","NA","Bathylagus stilbius","Lipolagus ochotensis","NA","Ronquilus jordani","Cololabis saira","NA","NA","NA","Trachurus symmetricus","NA","Prionace glauca","Icichthys lockingtoni","NA","Hydrolagus colliei","NA","Alosa fallax","NA","Clupea pallasii","NA","NA","Sardinops sagax","Artedius fenestralis|lateralis","Artedius harringtoni","NA","Chitonotus pugetensis","Leptocottus armatus","NA","Cryptacanthodes giganteus","Embiotoca jacksoni|lateralis","NA","Rhacochilus vacca","Zalembius rosaceus","Engraulis mordax","NA","Microgadus proximus","NA","NA","Hexagrammos decagrammus","Ophiodon elongatus","Jordania zonope","Liparis florae","Liparis fucensis|callyodon","Liparis pulchellus","NA","NA","Merluccius angustimanus|productus","Merluccius productus","NA","NA","Nansenia candida","Mola mola","NA","Diaphus theta","NA","NA","Nannobrachium regale","NA","Stenobrachius leucopsarus","Allosmerus elongatus","Hypomesus pretiosus","NA","Spirinchus starksi","Thaleichthys pacificus","Lestidiops ringens","Magnisudis atlantica","NA","NA","Citharichthys stigmaeus","Citharichthys xanthostigma|sordidus","NA","NA","NA","Pholis laeta","Sagamichthys abei","Atheresthes evermanni|stomias","NA","Eopsetta jordani","Glyptocephalus zachirus","Isopsetta isolepis","Lyopsetta exilis","Microstomus pacificus","NA","Parophrys vetulus","Pleuronichthys decurrens","Psettichthys melanostictus","NA","Raja binoculata","Raja inornata","Raja rhina","NA","NA","Oncorhynchus keta","Oncorhynchus kisutch","Oncorhynchus tshawytscha","NA","Salvelinus environmental|leucomaenis|fontinalis","Genyonemus lineatus","NA","Scomber japonicus","Thunnus alalunga|obesus","Apristurus brunneus","NA","NA","Sebastes aleutianus|melanostictus","Sebastes aurora|chlorostictus|ensifer|eos|exsul|helvomaculatus|nigrocinctus|notius|rosenblatti|rufus|simulator|spinorbis","Sebastes chrysomelas|caurinus|maliger","Sebastes cortezi|melanosema|sinensis|diploproa","Sebastes elongatus","Sebastes ensifer","Sebastes entomelas","Sebastes entomelas|mystinus","Sebastes jordani","Sebastes miniatus","Sebastes pinniger","Sebastes polyspinis|variabilis|ciliatus|crameri","Sebastes saxicola","Sebastes sp. NA|flavidus|melanops|serranoides","Sebastes sp. UW150000|glaucus|matsubarae|vulpes|aleutianus|trivittatus|borealis|proriger|diploproa","Sebastes sp. UW150443|emphaeus|variegatus|wilsoni|zacentrus","Sebastolobus altivelis","Squalus acanthias","Poroclinus rothrocki","Tactostoma macropus","NA","Zaniolepis latipinnis","Lycodapus mandibularis","Lycodes cortezianus","Lycodes diapterus","NA"],[319,1360,1089,22409,33082,541,83984,28113,20,74913,48936,184301,164,59269,1415,28353,141857,2113546,3078,55001,19365,2248,21964,540,4541,805,1196151,1399,36133,332681,2267,4471,52,1378,25143,96484,10015,101,1870,507,6737,192102,150995,106325,1987,204,11402,132675,360,1552,431,2850,586,168,6599,2179647,388737,156759,236544,4607,4679,290274,148167,86103,90059,174608,396011,11887,32788,42792,1364,12624,21113,27705,1101,9981,68404,1029251,276994,3447,319,4487,6953,29523,3382,79520,15318,190259,107769,42019,836145,16343,353,6164,26777,146316,33741,103425,677230,144852,97223,187,409754,158,2257,11028,32921,196735,315339,299,16311,86084,2629,17894,44477,257012,22472,174,26652,59341,68175,2006,44,10278,19656,111642,3014,341076,839,130597,1715,94218,1569,2599,5702,28969,5329,343251],[1,1,4,7,4,1,6,4,1,2,2,7,1,15,3,19,36,61,3,10,10,6,9,1,3,2,40,1,15,24,3,1,1,2,3,10,3,1,1,1,1,24,20,8,1,1,2,9,1,1,1,2,1,1,1,73,52,2,11,3,2,23,9,16,1,13,19,3,4,13,2,5,1,2,1,1,12,46,48,7,1,2,1,1,1,7,7,10,10,6,35,1,1,3,13,18,2,11,11,14,4,2,12,1,1,2,5,17,7,2,12,22,1,2,6,3,5,1,3,9,7,1,1,1,1,16,3,14,1,15,1,3,2,1,1,1,1,8]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Family<\/th>\n      <th>Species<\/th>\n      <th>#Sequences<\/th>\n      <th>#samples found<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"fpt","pagelenght":8,"columnDefs":[{"className":"dt-right","targets":[2,3]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+&lt;!-- -- --&gt;
+&lt;!-- - After QC and taxonomical assignment: 16M reads from 138 taxa --&gt;
 
+&lt;!-- -- --&gt;
+&lt;!-- - Identified 4 species of sharks, 4 Rays, 1 Chimaera --&gt;
+&lt;!-- - 84 species of bony fishes, including 16 _Sebastes_ spp. --&gt;
 
----
+&lt;!-- --- --&gt;
 
-## Species by species exploration
+&lt;!-- ```{r, echo = F, message = F, warning=FALSE} --&gt;
 
-.left-column[
-- Based on each species life-history, we can trace changes in *relative abundance* and *prevalence*
-]
 
-.right-column[  
-&lt;img src="images/Clupea.png" width="90%" style="display: block; margin: auto;" /&gt;
-]
----
 
-## Species by species exploration
+&lt;!-- By.taxa.dataset &lt;-  read_csv(here("Data", "by.taxa.dataset.metadata.csv")) %&gt;% mutate (Transect = as.character(Transect)) --&gt;
+&lt;!-- metadata  &lt;- read_csv(here("Data", "Final_metadata.csv")) --&gt;
 
-.left-column[
-  - Deep water species are close to the bottom, but also show up near surface
-]
+&lt;!-- #### Join it together through eDNA sample --&gt;
 
-.right-column[  
-&lt;img src="images/Raja.png" width="90%" style="display: block; margin: auto;" /&gt;
-  
-]
+&lt;!-- By.taxa.dataset %&gt;%  --&gt;
+&lt;!--   filter (!str_detect(taxa, "Cichlidae")) %&gt;% --&gt;
+&lt;!--   select(eDNA.sample, rep, taxa, nReads) %&gt;%  --&gt;
+&lt;!--   left_join(metadata) -&gt; Joined.dataset --&gt;
 
----
+&lt;!-- By.taxa.dataset %&gt;%  --&gt;
+&lt;!--   filter (!str_detect(taxa, "Cichlidae")) %&gt;%  --&gt;
+&lt;!--   group_by(taxa) %&gt;%  --&gt;
+&lt;!--   summarise (`#Sequences` = sum(nReads), --&gt;
+&lt;!--              `#samples found` = n_distinct(eDNA.sample)) %&gt;% --&gt;
+&lt;!--   arrange((taxa)) %&gt;%  --&gt;
+&lt;!--   separate(taxa, into = c("Family", NA, "Species"), sep = "%")  %&gt;%  --&gt;
+&lt;!-- DT::datatable(class = "compact", rownames = F,  --&gt;
+&lt;!--              # extensions = "Buttons", --&gt;
+&lt;!--              options = list(dom = 'fpt', --&gt;
+&lt;!--                             pagelenght = 8))  --&gt;
+&lt;!-- # kable(align = "c", format = "html") %&gt;% --&gt;
+&lt;!-- # kable_styling(full_width = F) %&gt;% --&gt;
+&lt;!-- # column_spec(1, bold = T) %&gt;% --&gt;
+&lt;!-- # collapse_rows(columns = 1, valign = "top") --&gt;
+&lt;!-- ``` --&gt;
 
-.left-column[
-## Alpha diversity
 
-  - Not clear patterns
-]
+&lt;!-- --- --&gt;
 
-.right-column[
-![](Scripps_files/figure-html/alpha-1.png)&lt;!-- --&gt;
-]
+&lt;!-- ## Species by species exploration --&gt;
 
----
+&lt;!-- .left-column[ --&gt;
+&lt;!-- - Based on each species life-history, we can trace changes in *relative abundance* and *prevalence* --&gt;
+&lt;!-- ] --&gt;
 
-### Community Composition Analysis
+&lt;!-- .right-column[   --&gt;
+&lt;!-- ```{r,echo=F,  out.width='90%', fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/Clupea.png") --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- --- --&gt;
 
-  - *The building block is a calculation of sample dissimilarity*
-  
-  - No use of raw number of reads -&gt; usually a transformation
-  
-      - Balance between importance of rare vs dominant species
-      
-  - Different algorithms from community ecology
-   
-      - Ditto plus different algorithms track different changes in community composition
+&lt;!-- ## Species by species exploration --&gt;
 
----
-### Community Composition Analysis
-&lt;img src="images/MDS.plot.png" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;!-- .left-column[ --&gt;
+&lt;!--   - Deep water species are close to the bottom, but also show up near surface --&gt;
+&lt;!-- ] --&gt;
 
----
+&lt;!-- .right-column[   --&gt;
+&lt;!-- ```{r,echo=F,  out.width = '90%',  fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/Raja.png") --&gt;
+&lt;!-- ``` --&gt;
 
-### Community Composition Analysis
+&lt;!-- ] --&gt;
 
-  - PERMANOVA: Using the Formula 
-`$$Bray-Curtis\sim Transect + Depth + Upwelling$$`
+&lt;!-- --- --&gt;
 
+&lt;!-- .left-column[ --&gt;
+&lt;!-- ## Alpha diversity --&gt;
 
+&lt;!--   - Not clear patterns --&gt;
+&lt;!-- ] --&gt;
 
-<div id="htmlwidget-2c19bd3010bd12b28b2a" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2c19bd3010bd12b28b2a">{"x":{"filter":"none","vertical":false,"data":[["Transect","Position","Upwelling","Residual","Total"],[7,2,1,103,113],[5.56495777946375,3.02510291469714,0.653711077169392,41.999499306796,51.2432710781263],[0.108598800630415,0.0590341492853767,0.0127570130363601,0.819610037047848,1],[1.94965130790777,3.70939660420412,1.60316770580054,null,null],[0.0001,0.0001,0.0255,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>term<\/th>\n      <th>df<\/th>\n      <th>SumOfSqs<\/th>\n      <th>R2<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":[1,2,3,4,5]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
+&lt;!-- .right-column[ --&gt;
+&lt;!-- ```{r alpha, echo = F, warning=F, message=F} --&gt;
+&lt;!-- Joined.dataset %&gt;%  --&gt;
+&lt;!--   group_by(eDNA.sample, Transect, Station, depth,position, groups) %&gt;%  --&gt;
+&lt;!--   summarise(n.taxa = n_distinct(taxa)) %&gt;%  --&gt;
+&lt;!--   ggplot(aes(y = n.taxa, x = position, fill = groups)) + --&gt;
+&lt;!--   geom_boxplot() --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
 
+&lt;!-- --- --&gt;
 
-  - PERMANOVA, and BC use .content-box-yellow[one value] to capture dissimilarity between two samples
-  - The CAP analyisis tries to *find* discrimination, even when it could be minimal. 
----
+&lt;!-- ### Community Composition Analysis --&gt;
 
-## Community Analysis - Another way
+&lt;!--   - *The building block is a calculation of sample dissimilarity* --&gt;
 
-  - Our hypothesis can better be tested using a Dirichelet Regression:
-  
-  so our Community in the original
-  
-`$$\bar{Comm}\sim Transect + Depth + Upwelling$$` 
+&lt;!--   - No use of raw number of reads -&gt; usually a transformation --&gt;
 
-is not constrained to one value per sample pair, but a matrix of proportions
+&lt;!--       - Balance between importance of rare vs dominant species --&gt;
 
-<div id="htmlwidget-7ee10014a2f5404b1b38" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7ee10014a2f5404b1b38">{"x":{"filter":"none","vertical":false,"data":[["S1","S2","...","Sn"],[50,4000,0,0],[300,250,0,400],["-","-","-","-"],[5000,300,0,350]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Sample<\/th>\n      <th>Spp1<\/th>\n      <th>Spp2<\/th>\n      <th>Spp...<\/th>\n      <th>Sppn<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"className":"dt-center","targets":[0,1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
----
+&lt;!--   - Different algorithms from community ecology --&gt;
 
-## Community Analysis - Another way
+&lt;!--       - Ditto plus different algorithms track different changes in community composition --&gt;
 
-  - Our hypothesis can better be tested using a Dirichlet Regression:
-  
-  so our Community in the original
-  
-`$$\bar{Comm}\sim Transect + Depth + Upwelling$$` 
+&lt;!-- --- --&gt;
+&lt;!-- ### Community Composition Analysis --&gt;
+&lt;!-- ```{r,echo=F,  out.width = '90%',  fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("images/MDS.plot.png") --&gt;
+&lt;!-- ``` --&gt;
 
-is not constrained to one value per sample pair, but a matrix of proportions
+&lt;!-- --- --&gt;
 
-<div id="htmlwidget-f88ba6294165b94ea06f" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f88ba6294165b94ea06f">{"x":{"filter":"none","vertical":false,"data":[["S1","S2","...","Sn"],[0.00934579439252336,0.879120879120879,0,0],[0.0560747663551402,0.0549450549450549,0,0.533333333333333],["-","-","-","-"],[0.934579439252336,0.0659340659340659,0,0.466666666666667]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Sample<\/th>\n      <th>Spp1<\/th>\n      <th>Spp2<\/th>\n      <th>Spp...<\/th>\n      <th>Sppn<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"},{"className":"dt-center","targets":[0,1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
+&lt;!-- ### Community Composition Analysis --&gt;
 
----
+&lt;!--   - PERMANOVA: Using the Formula  --&gt;
+&lt;!-- `$$Bray-Curtis\sim Transect + Depth + Upwelling$$` --&gt;
 
-## Community Analysis - Another way
 
-  - Dirichilet does not bode well with many zeroes
-  - Combining taxa into functional categories
-<div id="htmlwidget-ce2a72ba619a0d3a52c1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ce2a72ba619a0d3a52c1">{"x":{"filter":"none","vertical":false,"data":[["Marine; bathydemersal","Marine; bathypelagic","Marine; benthopelagic","Marine; brackish; benthopelagic","Marine; brackish; demersal","Marine; brackish; pelagic-neritic","Marine; demersal","Marine; demersal; non-migratory"],[2,19,2,2,2,3,70,1],[1,8,2,2,1,1,18,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Group<\/th>\n      <th>Number of taxa<\/th>\n      <th>Number of families<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"filter":false,"paging":false,"ordering":false,"columnDefs":[{"className":"dt-center","targets":[0,1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
-  
---
 
-.huge[*A work in progress*]
+&lt;!-- ```{r, echo = F, warning=F,message=F} --&gt;
+&lt;!-- read_csv(here("Output", "permanova.csv")) %&gt;% --&gt;
+&lt;!--   datatable(rownames = F, --&gt;
+&lt;!--             class = "display", --&gt;
+&lt;!--             options = list(info= F, filter =F, paging = F, ordering = F)) %&gt;%  --&gt;
+&lt;!--   formatRound(3:5, digits =2) --&gt;
+&lt;!-- ``` --&gt;
 
----
 
-layout: true
-class: nord-light,  typo-selection
-background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
-background-size: cover
----
+&lt;!--   - PERMANOVA, and BC use .content-box-yellow[one value] to capture dissimilarity between two samples --&gt;
+&lt;!--   - The CAP analyisis tries to *find* discrimination, even when it could be minimal.  --&gt;
+&lt;!-- --- --&gt;
 
-## .huge[.nord5[.center[.huge[*Bonus track*]]]]
+&lt;!-- ## Community Analysis - Another way --&gt;
 
-.center[
-.content-box-blue[
+&lt;!--   - Our hypothesis can better be tested using a Dirichelet Regression: --&gt;
 
-.huge[.nord1[*Diet composition in the Tufted Puffin*]]  
-]]
+&lt;!--   so our Community in the original --&gt;
 
-.left-column[
-.content-box-yellow[
+&lt;!-- `$$\bar{Comm}\sim Transect + Depth + Upwelling$$`  --&gt;
 
-- Using longer reads
-- Adaptive sampling vs blocker
-- Useful when non-target &gt;&gt;&gt; target
-]
-]
+&lt;!-- is not constrained to one value per sample pair, but a matrix of proportions --&gt;
 
-.right-column[
-&lt;img src="images/Puffin_Eating.jpeg" alt="puffin" width="800" &gt;
+&lt;!-- ```{r, echo=F, message=FALSE} --&gt;
+&lt;!-- tibble(Sample = c("S1", "S2", "...", "Sn"), --&gt;
+&lt;!--        Spp1   = c(50, 4000, 0, 0), --&gt;
+&lt;!--        Spp2   = c(300, 250, 0, 400), --&gt;
+&lt;!--        Spp3  = c(0,0, 0,0), --&gt;
+&lt;!--        Sppn   = c(5000, 300, 0,350)) %&gt;%  --&gt;
+&lt;!--   rename(`Spp...` = 4) -&gt; abundance.tibble --&gt;
 
-.footnote[ .nord5[.bold[Credit: @USFWSAlaska ]]]
-]
+&lt;!-- abundance.tibble %&gt;% mutate(Spp... = "-") %&gt;%  --&gt;
 
----
 
-## .nord5[.center[*Standard operation*]]
-.pull-left[
-.content-box-yellow[
-  - Using fecal and soil samples from nests (and zoo)
-  - Short fragment targets:
-      - Vertebrates
-      - Invertebrates
-      - Crustaceans
-  - PCR with a Puffin specific blocker
-  - Sequence on Illumina
-]
+&lt;!-- datatable(rownames = F, --&gt;
+&lt;!--             class = "display", --&gt;
+&lt;!--             options = list(info= F, filter =F, paging = F, ordering = F,  --&gt;
+&lt;!--                            columnDefs = list(list(className = 'dt-center', targets = 0:4)))) --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- --- --&gt;
 
-]
+&lt;!-- ## Community Analysis - Another way --&gt;
 
---
+&lt;!--   - Our hypothesis can better be tested using a Dirichlet Regression: --&gt;
 
-.pull-right[
-.content-box-purple[
+&lt;!--   so our Community in the original --&gt;
 
-- Pooling information from three overlapping primers
-- Effect of Puffin blocker on other similar species
-  
-]
-]
+&lt;!-- `$$\bar{Comm}\sim Transect + Depth + Upwelling$$`  --&gt;
 
----
-## .nord5[.center[*Nanopore Approach*]]
+&lt;!-- is not constrained to one value per sample pair, but a matrix of proportions --&gt;
 
-.pull-left[
-.content-box-yellow[
-  - Using fecal samples the zoo
-  - PCR 12S - 16S ~ 2000 bp
-  - Sequence on Nanopore
-  - Blocking Puffin sequences 
-  - Adaptive Sampling on a Mk1b + MinIT
-]
-&lt;img src="images/mk1c_twitter.jpg" alt="adaptive"  &gt;
-]
+&lt;!-- ```{r, echo =  F, message=F} --&gt;
+&lt;!-- rowSums(abundance.tibble[,2:5]) -&gt; rwosums --&gt;
 
-.pull-right[
+&lt;!-- abundance.tibble %&gt;% --&gt;
+&lt;!--   mutate(across(.cols = starts_with("Spp"),~.x/rwosums)) %&gt;%  --&gt;
+&lt;!--   mutate(across(.cols = starts_with("Spp"),~case_when(.x == NaN~0,TRUE~.x))) %&gt;%  --&gt;
+&lt;!--   mutate(Spp... = "-") -&gt; temp --&gt;
 
-&lt;img src="images/home_lab.jpeg" alt="adaptive"  &gt;
+&lt;!-- temp[3,c(2,3,5)]&lt;- 0 --&gt;
 
-]
----
-## .nord5[.center[*Nanopore Approach*]]
 
-.pull-left[
-.content-box-yellow[
-  - Using fecal samples from the zoo
-  - PCR 12S - 16S ~ 2000 bp
-  - Sequence on Nanopore
-  - Blocking Puffin sequences 
-  - Adaptive Sampling on a Mk1b + MinIT
-]
+&lt;!-- datatable(temp,rownames = F, --&gt;
+&lt;!--             class = "display", --&gt;
+&lt;!--             options = list(info= F, filter =F, paging = F, ordering = F,  --&gt;
+&lt;!--                            columnDefs = list(list(className = 'dt-center', targets = 0:4)))) %&gt;%  --&gt;
+&lt;!--   DT::formatRound(columns = c(2,3,5)) --&gt;
+&lt;!-- ``` --&gt;
 
-]
+&lt;!-- --- --&gt;
 
+&lt;!-- ## Community Analysis - Another way --&gt;
 
+&lt;!--   - Dirichilet does not bode well with many zeroes --&gt;
+&lt;!--   - Combining taxa into functional categories --&gt;
+&lt;!-- ```{r, echo = F, message=FALSE} --&gt;
+&lt;!-- read_csv(here("Data", "unique.sp_collapse.csv")) %&gt;%  --&gt;
+&lt;!--   rename (Group = 13) %&gt;%  --&gt;
+&lt;!--   group_by(Group) %&gt;%  --&gt;
+&lt;!--   summarise('Number of taxa' = n(), --&gt;
+&lt;!--              'Number of families' = n_distinct(family)) %&gt;%  --&gt;
+&lt;!--   filter(!is.na(Group)) %&gt;%  --&gt;
+&lt;!--   slice(1:8) %&gt;%  --&gt;
+&lt;!--   datatable(rownames = F, --&gt;
+&lt;!--             class = "display", --&gt;
+&lt;!--             options = list(info= F, filter =F, paging = F, ordering = F,  --&gt;
+&lt;!--                            columnDefs = list(list(className = 'dt-center', targets = 0:2)))) --&gt;
 
-.pull-right[
+&lt;!-- ``` --&gt;
 
-&lt;img src="images/adaptive_sampling.jpg" alt="adaptive"  &gt;
+&lt;!-- -- --&gt;
 
-.content-box-purple[
+&lt;!-- .huge[*A work in progress*] --&gt;
 
-- Run for ~ 4 hours
-- Flowcell 10
-- \&gt; 150k reads
-- Run `decona` with Medaka + Racon
-]
-]
+&lt;!-- --- --&gt;
 
----
-## .nord5[.center[*Preliminary results*]]
-.left-column[
-.content-box-yellow[
+&lt;!-- layout: true --&gt;
+&lt;!-- class: nord-light,  typo-selection --&gt;
+&lt;!-- background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg) --&gt;
+&lt;!-- background-size: cover --&gt;
+&lt;!-- --- --&gt;
 
-Zoo Puffn's diet a healthy mixture of:
-- Capelin
-- squid
-- krill
-- herring
-- Silverside
+&lt;!-- ## .huge[.nord5[.center[.huge[*Bonus track*]]]] --&gt;
 
-]
+&lt;!-- .center[ --&gt;
+&lt;!-- .content-box-blue[ --&gt;
 
-]
+&lt;!-- .huge[.nord1[*Diet composition in the Tufted Puffin*]]   --&gt;
+&lt;!-- ]] --&gt;
 
---
+&lt;!-- .left-column[ --&gt;
+&lt;!-- .content-box-yellow[ --&gt;
 
-.right-column[
+&lt;!-- - Using longer reads --&gt;
+&lt;!-- - Adaptive sampling vs blocker --&gt;
+&lt;!-- - Useful when non-target &gt;&gt;&gt; target --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
 
-.content-box-purple[
+&lt;!-- .right-column[ --&gt;
+&lt;!-- &lt;img src="images/Puffin_Eating.jpeg" alt="puffin" width="800" &gt; --&gt;
 
-.huge[`decona` found 4 contigs that we could match to:]
-- 97.67% `pident` with *Mallotus villosus* (Capelin) (~2k bp)
-- 99.90% `pident` with *Menidia menidia* (Atlantic Silverside)(~ 2k bp)
-- 96% `pident` with *Fratercula arctica* (Atlantic Puffin) (~1.3k bp)
-- 96% `pident` with *Pinguinus impennis* (Great Auk, extinct) (~1.3k bp)
-]
+&lt;!-- .footnote[ .nord5[.bold[Credit: @USFWSAlaska ]]] --&gt;
+&lt;!-- ] --&gt;
 
-]
----
+&lt;!-- --- --&gt;
 
-## .nord5[.center[*Preliminary results*]]
+&lt;!-- ## .nord5[.center[*Standard operation*]] --&gt;
+&lt;!-- .pull-left[ --&gt;
+&lt;!-- .content-box-yellow[ --&gt;
+&lt;!--   - Using fecal and soil samples from nests (and zoo) --&gt;
+&lt;!--   - Short fragment targets: --&gt;
+&lt;!--       - Vertebrates --&gt;
+&lt;!--       - Invertebrates --&gt;
+&lt;!--       - Crustaceans --&gt;
+&lt;!--   - PCR with a Puffin specific blocker --&gt;
+&lt;!--   - Sequence on Illumina --&gt;
+&lt;!-- ] --&gt;
 
-.left-column[
-.content-box-yellow[
+&lt;!-- ] --&gt;
 
-Zoo Puffn's diet a healthy mixture of:
-- Capelin
-- squid
-- krill
-- herring
-- Silverside
+&lt;!-- -- --&gt;
 
-]
+&lt;!-- .pull-right[ --&gt;
+&lt;!-- .content-box-purple[ --&gt;
 
-]
+&lt;!-- - Pooling information from three overlapping primers --&gt;
+&lt;!-- - Effect of Puffin blocker on other similar species --&gt;
 
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
 
+&lt;!-- --- --&gt;
+&lt;!-- ## .nord5[.center[*Nanopore Approach*]] --&gt;
 
-.right-column[
+&lt;!-- .pull-left[ --&gt;
+&lt;!-- .content-box-yellow[ --&gt;
+&lt;!--   - Using fecal samples the zoo --&gt;
+&lt;!--   - PCR 12S - 16S ~ 2000 bp --&gt;
+&lt;!--   - Sequence on Nanopore --&gt;
+&lt;!--   - Blocking Puffin sequences  --&gt;
+&lt;!--   - Adaptive Sampling on a Mk1b + MinIT --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;img src="images/mk1c_twitter.jpg" alt="adaptive"  &gt; --&gt;
+&lt;!-- ] --&gt;
 
-.content-box-purple[
+&lt;!-- .pull-right[ --&gt;
 
-.huge[`decona` found 4 contigs that we could match to:]
-- 97.67% `pident` with *Mallotus villosus* (Capelin) (~2k bp)
-- 99.90% `pident` with *Menidia menidia* (Atlantic Silverside)(~ 2k bp)
- .content-box-red[ 
- 
-- 96% `pident` with *Fratercula arctica* (Atlantic Puffin) (~1.3k bp)
-- 96% `pident` with *Pinguinus impennis* (Great Auk, extinct) (~1.3k bp)
+&lt;!-- &lt;img src="images/home_lab.jpeg" alt="adaptive"  &gt; --&gt;
 
-]]
+&lt;!-- ] --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- ## .nord5[.center[*Nanopore Approach*]] --&gt;
 
-]
+&lt;!-- .pull-left[ --&gt;
+&lt;!-- .content-box-yellow[ --&gt;
+&lt;!--   - Using fecal samples from the zoo --&gt;
+&lt;!--   - PCR 12S - 16S ~ 2000 bp --&gt;
+&lt;!--   - Sequence on Nanopore --&gt;
+&lt;!--   - Blocking Puffin sequences  --&gt;
+&lt;!--   - Adaptive Sampling on a Mk1b + MinIT --&gt;
+&lt;!-- ] --&gt;
 
----
+&lt;!-- ] --&gt;
 
-.content-box-purple[
-.huge[**Both *short* sequences are...**]
 
-&lt;img src="images/Puffin.png" alt="alignment"  &gt;
 
-.huge[** Forward and Reverse from the same sequence**]
-]
+&lt;!-- .pull-right[ --&gt;
+
+&lt;!-- &lt;img src="images/adaptive_sampling.jpg" alt="adaptive"  &gt; --&gt;
+
+&lt;!-- .content-box-purple[ --&gt;
+
+&lt;!-- - Run for ~ 4 hours --&gt;
+&lt;!-- - Flowcell 10 --&gt;
+&lt;!-- - \&gt; 150k reads --&gt;
+&lt;!-- - Run `decona` with Medaka + Racon --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- ## .nord5[.center[*Preliminary results*]] --&gt;
+&lt;!-- .left-column[ --&gt;
+&lt;!-- .content-box-yellow[ --&gt;
+
+&lt;!-- Zoo Puffn's diet a healthy mixture of: --&gt;
+&lt;!-- - Capelin --&gt;
+&lt;!-- - squid --&gt;
+&lt;!-- - krill --&gt;
+&lt;!-- - herring --&gt;
+&lt;!-- - Silverside --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- .right-column[ --&gt;
+
+&lt;!-- .content-box-purple[ --&gt;
+
+&lt;!-- .huge[`decona` found 4 contigs that we could match to:] --&gt;
+&lt;!-- - 97.67% `pident` with *Mallotus villosus* (Capelin) (~2k bp) --&gt;
+&lt;!-- - 99.90% `pident` with *Menidia menidia* (Atlantic Silverside)(~ 2k bp) --&gt;
+&lt;!-- - 96% `pident` with *Fratercula arctica* (Atlantic Puffin) (~1.3k bp) --&gt;
+&lt;!-- - 96% `pident` with *Pinguinus impennis* (Great Auk, extinct) (~1.3k bp) --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- ] --&gt;
+&lt;!-- --- --&gt;
+
+&lt;!-- ## .nord5[.center[*Preliminary results*]] --&gt;
+
+&lt;!-- .left-column[ --&gt;
+&lt;!-- .content-box-yellow[ --&gt;
+
+&lt;!-- Zoo Puffn's diet a healthy mixture of: --&gt;
+&lt;!-- - Capelin --&gt;
+&lt;!-- - squid --&gt;
+&lt;!-- - krill --&gt;
+&lt;!-- - herring --&gt;
+&lt;!-- - Silverside --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- ] --&gt;
+
+
+
+&lt;!-- .right-column[ --&gt;
+
+&lt;!-- .content-box-purple[ --&gt;
+
+&lt;!-- .huge[`decona` found 4 contigs that we could match to:] --&gt;
+&lt;!-- - 97.67% `pident` with *Mallotus villosus* (Capelin) (~2k bp) --&gt;
+&lt;!-- - 99.90% `pident` with *Menidia menidia* (Atlantic Silverside)(~ 2k bp) --&gt;
+&lt;!--  .content-box-red[  --&gt;
+
+&lt;!-- - 96% `pident` with *Fratercula arctica* (Atlantic Puffin) (~1.3k bp) --&gt;
+&lt;!-- - 96% `pident` with *Pinguinus impennis* (Great Auk, extinct) (~1.3k bp) --&gt;
+
+&lt;!-- ]] --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- .content-box-purple[ --&gt;
+&lt;!-- .huge[**Both *short* sequences are...**] --&gt;
+
+&lt;!-- &lt;img src="images/Puffin.png" alt="alignment"  &gt; --&gt;
+
+&lt;!-- .huge[** Forward and Reverse from the same sequence**] --&gt;
+&lt;!-- ] --&gt;
 
 ---
 layout: false
@@ -2164,7 +2403,7 @@ class: middle, nord-dark
 
 
 
-.footnote[Slides available at .nord8.bold[ramongallego.github.io/Presentation2022/Index.html]]
+.footnote[Slides available at .nord8.bold[ramongallego.github.io/Presentation2022/Scripps.html#1]]
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
@@ -2172,6 +2411,7 @@ class: middle, nord-dark
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
+"highlightSpans": true,
 "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
